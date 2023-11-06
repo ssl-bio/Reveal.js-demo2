@@ -1,0 +1,228 @@
+:root {
+ --r-main-font: "Open Sans", sans-serif;
+ --r-heading-font: "Open Sans", sans-serif;
+ --r-heading1-size: 2em;
+ --r-heading2-size: 1.875em;
+ --r-heading3-size: 1.750em;
+ --r-heading4-size: 1.625em;
+ --r-heading5-size: 1.625em;
+
+ font-size: calc(0.7em + 1vw);
+ line-height: 1.25em;
+ word-spacing: 0.225em;
+}
+
+/* Prevent uppcase */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  text-transform: none;
+}
+
+/* ============================== */
+/* Title slide customization */
+/* ============================== */
+.reveal #sec-title-slide {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.reveal #sec-title-slide .title{
+    font-weight: 700;
+}
+
+.reveal #sec-title-slide .author{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.reveal #sec-title-slide .date{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.reveal pre code {
+    line-height: 1.625em;
+    padding-left: 0.5em;
+    font-family: "Monospace";
+}
+
+/* ============================== */
+/* Layout */
+/* ============================== */
+/* Slide content dimensions */
+.content-size{
+    height: calc(var(--slide-height) * 0.8);
+    width: 100%;
+}
+
+/* Flex */
+.reveal .dFlex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.reveal .dFlex-row {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.dFlex-centered { justify-content: center; }
+.dFlex-evenly { justify-content: space-evenly; }
+
+/* Grid  */
+.reveal .col {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr;
+}
+
+.reveal .col3 {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.reveal .col2,
+/* .reveal .col2-span-columns, */
+.reveal .col2-span-rowLast,
+.reveal .col2-span-rowFirst {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+}
+
+.reveal .col2-span-rowFirst div:first-child {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+
+.reveal .col2-span-rowLast div:last-child {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+
+.reveal .col2-span-column {
+    grid-column: span 2;
+}
+
+.reveal .col3-span-column {
+    grid-column: span 3;
+}
+
+/* Lists */
+.reveal ul,
+ol {
+    margin-left: 0;
+    width: calc(100% - 2em);
+}
+
+/* ============================== */
+/* Font options */
+/* ============================== */
+/* Size */
+.text-fn  { font-size: 0.625rem; }
+.text-sm  { font-size: 0.750rem; }
+.text-md  { font-size: 0.875rem; }
+.title-md h4,
+h5 { font-size: 1.5em;    }
+.title-sm h4,
+h5 { font-size: 1.375em;    }
+
+/* Alignment */
+.justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Text color */
+.textCol-link { color: var(--r-link-color)}
+.textCol-bg { color: var(--r-background-color)}
+
+/* ============================== */
+/* Custom boxes dimensions */
+/* ============================== */
+/* Padding */
+.padded-05 { padding: 0.5em; }
+.padded-1  { padding: 1em;   }
+.padded-05lr { padding: 0 0.5em; }
+.padded-1lr  { padding: 0 1em;   }
+
+/* Heights of containers */
+.box-15h  { height: calc(var(--slide-height)*0.15); }
+.box-20h  { height: calc(var(--slide-height)*0.20); }
+.box-25h  { height: calc(var(--slide-height)*0.25); }
+.box-30h  { height: calc(var(--slide-height)*0.30); }
+.box-35h  { height: calc(var(--slide-height)*0.35); }
+.box-40h  { height: calc(var(--slide-height)*0.40); }
+.box-45h  { height: calc(var(--slide-height)*0.45); }
+.box-50h  { height: calc(var(--slide-height)*0.50); }
+.box-55h  { height: calc(var(--slide-height)*0.55); }
+.box-60h  { height: calc(var(--slide-height)*0.60); }
+
+/* Height of code block */
+/* .code-80h pre{ height: calc(var(--slide-height)*0.8);} */
+.code-70h pre{ height: calc(var(--slide-height)*0.7);}
+.code-60h pre{ height: calc(var(--slide-height)*0.6);}
+.code-50h pre{ height: calc(var(--slide-height)*0.5);}
+
+/* Image max width */
+.reveal .img      { max-width: 100%; }
+.reveal .img-50w  { max-width: 50%;  }
+.reveal .img-45w  { max-width: 45%;  }
+.reveal .img-40w  { max-width: 40%;  }
+.reveal .img-35w  { max-width: 35%;  }
+.reveal .img-30w  { max-width: 30%;  }
+.reveal .img-25w  { max-width: 25%;  }
+
+/* ============================== */
+/* Figures' defaults*/
+/* ============================== */
+.reveal .figure {
+    font-size: 0.750rem;
+    margin-bottom: 0;
+}
+
+.reveal .figure-number {
+    margin: 0;
+    font-size: 0.750rem;
+    font-weight: 700;
+}
+
+.reveal .figure p:first-child {
+    margin-bottom: 0;
+}
+
+.reveal .figure p:last-child {
+    margin-top: 0;
+}
+
+/* ============================== */
+/* Backgrounds */
+/* ============================== */
+/* Backgrounds for boxes */
+.box-Bg-A,
+.box-Bg-B,
+.box-Bg-C {
+    border-radius: 1em;
+    z-index: -1;
+}
+
+.box-Bg-A { background: var(--clr-bg-A); }
+.box-Bg-B { background: var(--clr-bg-B); }
+.box-Bg-C { background: var(--r-main-color); }
+.box-Bg-CB {
+    flex-basis: 30%;
+    background: var(--clr-bg-B);
+    box-shadow: 0.750em 0.750em var(--clr-bg-A);
+    border-radius: 0.750em;
+    align-content: center;
+    align-items: center;
+}

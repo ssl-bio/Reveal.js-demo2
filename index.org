@@ -1,0 +1,776 @@
+#+MACRO: color @@html:<font color="$1">$2</font>@@
+#+MACRO: fa @@html:<i class="fa $1" style="color:var(--r-link-color);"></i>@@
+#+MACRO: fa-cust @@html:<i class="fa $1" style="color:$2; font-size:$3"></i>@@
+#+MACRO: toppic @@html:<img class="r-stretch" src="$1">@@
+#+MACRO: column #+REVEAL_HTML: <div class="column $1" style="float: $2; width:$3">
+#+MACRO: div-end #+REVEAL_HTML: </div>
+#+MACRO: class #+ATTR_HTML: :class $1
+#+MACRO: html #+REVEAL_HTML: $1
+
+#+options: timestamp:nil ^:{}
+#+Title: Reveal.js demo2
+#+Author: Saul S.L.
+#+Date: 2023-11-10
+
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_HLEVEL: 2
+#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Reveal.js demo">
+#+REVEAL_POSTAMBLE: <p>Created by ssl</p>
+#+REVEAL_INIT_OPTIONS: width:1200, height:800, minScale:0.2, maxScale:2.5, transition: 'fade', progress:true, history:true, center:true, mouseWheel:false, menu:{themes:true, transitions:true, markers:true, custom: false, hideMissingTitles:true}, customcontrols:{controls:[{id:'toggle-overview', title:'Toggleoverview(O)', icon:'<i class="fa fa-th"></i>', action:'Reveal.toggleOverview();'}, {icon:'<i class="fa fa-message"></i>', title:'Toggle iframe legend', action:'ilegend()'}]}, pointer: {key: "q", color: "red", pointerSize: 16, alwaysVisible: false, tailLength: 10}
+#+REVEAL_THEME: moon
+#+OPTIONS: num:nil toc:nil
+
+#+REVEAL_EXTRA_CSS: ./plugin_extra/customcontrols/style.css
+#+REVEAL_EXTRA_CSS: ./personal/css/icustom.css
+#+REVEAL_EXTRA_CSS: ./plugin_extra/drawer/drawer.css
+#+REVEAL_EXTRA_CSS: ./plugin_extra/pointer/pointer.css
+#+REVEAL_EXTRA_CSS: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css
+#+REVEAL_EXTERNAL_PLUGINS: (RevealMenu . "./plugin_extra/menu/menu.js") 
+#+REVEAL_EXTERNAL_PLUGINS: (RevealCustomControls . "./plugin_extra/customcontrols/plugin.js")
+#+REVEAL_EXTERNAL_PLUGINS: (RevealDrawer . "./plugin_extra/drawer/drawer.js")
+#+REVEAL_EXTERNAL_PLUGINS: (RevealPointer . "./plugin_extra/pointer/pointer.js")
+#+REVEAL_PLUGINS: (notes zoom highlight RevealMenu RevealCustomControls RevealPointer RevealDrawer)
+#+REVEAL_EXTRA_SCRIPT_SRC: ./personal/js/icustom.js
+# #+REVEAL_TITLE_SLIDE_BACKGROUND: ./personal/images/png/Utokyo-logo.png
+
+* Layouts
+** Title and single content
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+#+ATTR_HTML: :class content-size
+ #+begin_box-Bg-A
+ Box 1
+ #+end_box-Bg-A
+*** Long list
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch "
+:END:
+#+ATTR_HTML: :class content-size dFlex-col dFlex-evenly box-Bg-A padded-1lr
+- Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.
+- Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+- Donec vitae dolor.
+- Phasellus purus.
+- Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.
+- Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.
+*** Short list
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch "
+:END:
+#+ATTR_HTML: :class content-size dFlex dFlex-evenly box-Bg-A padded-1lr
+- Nullam libero mauris, consequat quis, varius et, dictum id, arcu.
+- Donec vitae dolor.
+- Aliquam feugiat tellus ut neque.
+*** Layout with code
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2
+#+ATTR_HTML: :class dFlex-centered
+#+begin_dFlex-col
+#+begin_box-Bg-C
+file:./personal/images/layout-1.png
+#+end_box-Bg-C
+#+end_dFlex-col
+
+#+ATTR_HTML: :class dFlex-centered
+#+begin_dFlex-col
+Emacs org-mode content
+#+begin_text-md
+#+begin_src org -i
+,** Title and single content
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+,#+ATTR_HTML: :class content-size
+,#+begin_box-Bg-A
+Box 1
+,#+end_box-Bg-A
+#+end_src
+#+end_text-md
+#+end_dFlex-col
+#+end_col2
+
+** Title and 2 elements (columns)
+ :PROPERTIES:
+ :REVEAL_EXTRA_ATTR: class="stretch box-Bg-B"
+ :END:
+ #+ATTR_HTML: :class content-size
+ #+begin_col2
+ #+begin_box-Bg-A
+ Box 1
+ #+end_box-Bg-A
+ #+begin_box-Bg-A
+ Box 2
+ #+end_box-Bg-A
+ #+end_col2
+*** Images with lists
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
+:END:
+#+ATTR_HTML: :class content-size
+ #+begin_col2
+ #+begin_box-Bg-A
+ #+caption: Landscape 1
+ [[file:./personal/images/landscape-1.jpg]]
+#+ATTR_HTML: :class text-sm
+ - Nullam tristique diam non turpis.
+ - Curabitur lacinia pulvinar nibh.
+ #+end_box-Bg-A
+ 
+ #+begin_box-Bg-A
+ #+caption: Landscape 2
+[[file:./personal/images/landscape-2.jpg]]
+ #+end_box-Bg-A
+ #+end_col2
+*** Content of different height
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
+:END:
+#+ATTR_HTML: :class content-size
+ #+begin_col2
+ #+begin_box-Bg-A
+ #+ATTR_HTML: :class text-sm padded-1
+ - Nullam tristique diam non turpis.
+ - Curabitur lacinia pulvinar nibh.
+ #+end_box-Bg-A
+
+ #+ATTR_HTML: :class dFlex-col dFlex-evenly
+ #+begin_box-Bg-A
+#+ATTR_HTML: :class text-sm padded-1
+- Mauris ac felis vel velit tristique imperdiet.
+- Praesent fermentum tempor tellus.
+- Cras placerat accumsan nulla.
+- Phasellus neque orci, porta a, aliquet quis, semper a, massa.
+- Nulla posuere.
+- Etiam laoreet quam sed arcu.
+- Curabitur vulputate vestibulum lorem.
+- Nulla posuere.
+- Aliquam posuere.  
+ #+end_box-Bg-A
+ #+end_col2
+*** Layout with code
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2
+#+ATTR_HTML: :class dFlex-centered
+#+begin_dFlex-col
+#+begin_box-Bg-C
+file:./personal/images/layout-2.png
+#+end_box-Bg-C
+#+end_dFlex-col
+
+#+ATTR_HTML: :class dFlex-centered
+#+begin_dFlex-col
+Emacs org-mode content
+#+begin_text-md
+#+begin_src org -i
+,** Title and 2 elements (columns)
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+,#+begin_col2
+,#+begin_box-Bg-A
+Box 1
+,#+end_box-Bg-A
+,#+end_col2
+,#+begin_box-Bg-A
+Box 2
+,#+end_box-Bg-A
+#+end_src
+#+end_text-md
+#+end_dFlex-col
+#+end_col2
+
+** Title and 3 elements (Columns)
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2-span-rowLast
+#+begin_box-Bg-A
+Box 1
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 2
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 3
+#+end_box-Bg-A
+#+end_col2-span-rowLast
+*** 2 images and long description
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch "
+:END:
+#+begin_col2-span-rowLast
+#+begin_box-Bg-A
+#+ATTR_HTML: :class img-50w
+#+caption: Landscape 1
+[[file:./personal/images/landscape-1.jpg]]
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+#+ATTR_HTML: :class img-50w
+#+caption: Landscape 2
+[[file:./personal/images/landscape-2.jpg]]
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+#+ATTR_HTML: :class text-md justify padded-1lr
+Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+#+end_box-Bg-A
+#+end_col2-span-rowLast
+    
+*** 2 images and long description (Reversed)
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
+:END:
+#+begin_col2-span-rowFirst
+#+begin_box-Bg-A
+#+ATTR_HTML: :class text-md justify padded-1lr
+Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+#+ATTR_HTML: :class img-50w
+#+caption: Landscape 1
+[[file:./personal/images/landscape-1.jpg]]
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+#+ATTR_HTML: :class img-50w
+#+caption: Landscape 2
+[[file:./personal/images/landscape-2.jpg]]
+#+end_box-Bg-A
+#+end_col2-span-rowFirst
+    
+*** 1 image and two descriptions
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch "
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2-span-rowLast
+#+begin_box-Bg-A
+#+ATTR_HTML: :class text-md justify padded-1lr
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+#+ATTR_HTML: :class text-md
+- Etiam laoreet quam sed arcu.
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+#+caption: Landscape 3
+[[file:./personal/images/landscape-3.jpg]]
+#+end_box-Bg-A
+#+end_col2-span-rowLast
+*** Layout with code
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2
+#+ATTR_HTML: :class dFlex-centered
+#+begin_dFlex-col
+#+begin_box-Bg-C
+file:./personal/images/layout-3.png
+#+end_box-Bg-C
+#+end_dFlex-col
+
+#+ATTR_HTML: :class dFlex-centered code-60h
+#+begin_dFlex-col
+Emacs org-mode content
+#+begin_text-md
+#+begin_src org -i
+,** Title and 3 elements (Columns)
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+,#+ATTR_HTML: :class content-size
+,#+begin_col2-span-rowLast
+,#+begin_box-Bg-A
+Box 1
+,#+end_box-Bg-A
+
+,#+begin_box-Bg-A
+Box 2
+,#+end_box-Bg-A
+
+,#+begin_box-Bg-A
+Box 3
+,#+end_box-Bg-A
+,#+end_col2-span-rowLast
+#+end_src
+#+end_text-md
+#+end_dFlex-col
+#+end_col2
+
+** Title and 3 elements (Rows)
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2
+#+begin_box-Bg-A
+Box 1
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 2
+#+end_box-Bg-A
+
+#+ATTR_HTML: :class col2-span-column
+#+begin_box-Bg-A
+Box 3
+#+end_box-Bg-A
+#+end_col2
+*** 2 images and description
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch "
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2
+#+begin_box-Bg-A
+#+caption: Landscape 4
+[[file:./personal/images/landscape-4.jpg]]
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+#+caption: Landscape 5
+[[file:./personal/images/landscape-5.jpg]]
+#+end_box-Bg-A
+
+#+ATTR_HTML: :class col2-span-column
+#+begin_box-Bg-A
+#+ATTR_HTML: :class dFlex dFlex-evenly box-20h text-sm
+- Nunc eleifend leo vitae magna.
+- Nullam rutrum.
+- Curabitur lacinia pulvinar nibh.
+- Nullam libero mauris, consequat quis, varius et, dictum id, arcu.
+#+end_box-Bg-A
+#+end_col2
+*** Layout with code
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2
+#+ATTR_HTML: :class dFlex-centered
+#+begin_dFlex-col
+#+begin_box-Bg-C
+file:./personal/images/layout-4.png
+#+end_box-Bg-C
+#+end_dFlex-col
+
+#+ATTR_HTML: :class dFlex-centered code-60h
+#+begin_dFlex-col
+Emacs org-mode content
+#+begin_text-md
+#+begin_src org -i
+,** Title and 3 elements (Rows)
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+,#+ATTR_HTML: :class content-size
+,#+begin_col2
+,#+begin_box-Bg-A
+Box 1
+,#+end_box-Bg-A
+,#+begin_box-Bg-A
+Box 2
+,#+end_box-Bg-A
+
+,#+ATTR_HTML: :class col2-span-column
+,#+begin_box-Bg-A
+Box 3
+,#+end_box-Bg-A
+,#+end_col2
+#+end_src
+#+end_text-md
+#+end_dFlex-col
+#+end_col2
+
+** Title and 4 elements
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2
+#+begin_box-Bg-A
+Box 1
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 2
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 3
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 4
+#+end_box-Bg-A
+#+end_col2
+*** Title and 4 images
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2
+#+begin_box-Bg-A
+#+ATTR_HTML: :class img-50w
+#+caption: Landscape 5
+[[file:./personal/images/landscape-6.jpg]]
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+#+ATTR_HTML: :class img-50w
+#+caption: Landscape 7
+[[file:./personal/images/landscape-7.jpg]]
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+#+ATTR_HTML: :class img-50w
+#+caption: Landscape 1
+[[file:./personal/images/landscape-1.jpg]]
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+#+ATTR_HTML: :class img-50w
+#+caption: Landscape 2
+[[file:./personal/images/landscape-2.jpg]]
+#+end_box-Bg-A
+#+end_col2
+*** Title, 2 images and 2 descriptions
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2
+#+begin_box-Bg-A
+#+ATTR_HTML: :class img-50w
+#+caption: Landscape 3
+[[file:./personal/images/landscape-3.jpg]]
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+#+ATTR_HTML: :class img-50w
+#+caption: Landscape 4
+[[file:./personal/images/landscape-4.jpg]]
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+#+ATTR_HTML: :class text-sm
+- Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.
+- Nunc rutrum turpis sed pede.
+- Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+#+ATTR_HTML: :class text-fn justify padded-05lr
+Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.
+#+end_box-Bg-A
+#+end_col2
+
+*** Layout with code
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2
+#+ATTR_HTML: :class dFlex-centered
+#+begin_dFlex-col
+#+begin_box-Bg-C
+file:./personal/images/layout-5.png
+#+end_box-Bg-C
+#+end_dFlex-col
+
+#+ATTR_HTML: :class dFlex-centered code-70h
+#+begin_dFlex-col
+Emacs org-mode content
+#+begin_text-md
+#+begin_src org -i
+,** Title and 4 elements
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+,#+ATTR_HTML: :class content-size
+,#+begin_col2
+,#+begin_box-Bg-A
+Box 1
+,#+end_box-Bg-A
+
+,#+begin_box-Bg-A
+Box 2
+,#+end_box-Bg-A
+
+,#+begin_box-Bg-A
+Box 3
+,#+end_box-Bg-A
+
+,#+begin_box-Bg-A
+Box 4
+,#+end_box-Bg-A
+,#+end_col2
+#+end_src
+#+end_text-md
+#+end_dFlex-col
+#+end_col2
+
+** Title and 6 elements
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col3
+#+begin_box-Bg-A
+Box 1
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 2
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 3
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 4
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 5
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 6
+#+end_box-Bg-A
+#+end_col3
+*** Title and 6 images
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col3
+#+begin_box-Bg-A
+[[file:./personal/images/landscape-5.jpg]]
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+[[file:./personal/images/landscape-6.jpg]]
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+[[file:./personal/images/landscape-7.jpg]]
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+[[file:./personal/images/landscape-1.jpg]]
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+[[file:./personal/images/landscape-2.jpg]]
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+[[file:./personal/images/landscape-3.jpg]]
+#+end_box-Bg-A
+#+end_col3
+*** Layout with code
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2
+#+ATTR_HTML: :class dFlex-centered
+#+begin_dFlex-col
+#+begin_box-Bg-C
+file:./personal/images/layout-6.png
+#+end_box-Bg-C
+#+end_dFlex-col
+
+#+ATTR_HTML: :class dFlex-centered code-70h
+#+begin_dFlex-col
+Emacs org-mode content
+#+begin_text-md
+#+begin_src org -i
+,** Title and 6 elements
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+,#+ATTR_HTML: :class content-size
+,#+begin_col3
+,#+begin_box-Bg-A
+Box 1
+,#+end_box-Bg-A
+
+,#+begin_box-Bg-A
+Box 2
+,#+end_box-Bg-A
+
+,#+begin_box-Bg-A
+Box 3
+,#+end_box-Bg-A
+
+,#+begin_box-Bg-A
+Box 4
+,#+end_box-Bg-A
+
+,#+begin_box-Bg-A
+Box 5
+,#+end_box-Bg-A
+
+,#+begin_box-Bg-A
+Box 6
+,#+end_box-Bg-A
+,#+end_col3
+#+end_src
+#+end_text-md
+#+end_dFlex-col
+#+end_col2
+
+** Title and 2 elements (rows)
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col
+#+begin_box-Bg-A
+Box 1
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 2
+#+end_box-Bg-A
+#+end_col
+*** Large image and description
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch "
+:END:
+#+ATTR_HTML: :class content-box
+#+begin_col
+#+begin_box-Bg-A
+#+caption: Landscape 4
+[[file:./personal/images/landscape-4.jpg]]
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+#+ATTR_HTML: :class text-sm
+ - Nullam tristique diam non turpis.
+ - Curabitur lacinia pulvinar nibh.
+#+end_box-Bg-A
+#+end_col
+*** Mid image and description
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch "
+:END:
+#+ATTR_HTML: :class content-box
+#+begin_col
+#+begin_box-Bg-A
+#+ATTR_HTML: :class img-40w
+#+caption: Landscape 5
+[[file:./personal/images/landscape-5.jpg]]
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+#+ATTR_HTML: :class text-md
+ - Nullam tristique diam non turpis.
+ - Curabitur lacinia pulvinar nibh.
+ - Nullam tristique diam non turpis.
+ - Curabitur lacinia pulvinar nibh.
+#+end_box-Bg-A
+#+end_col
+*** Layout with code
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2
+#+ATTR_HTML: :class dFlex-centered
+#+begin_dFlex-col
+#+begin_box-Bg-C
+file:./personal/images/layout-7.png
+#+end_box-Bg-C
+#+end_dFlex-col
+
+#+ATTR_HTML: :class dFlex-centered
+#+begin_dFlex-col
+Emacs org-mode content
+#+begin_text-md
+#+begin_src org -i
+,** Title and 2 elements (rows)
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+,#+ATTR_HTML: :class content-size
+,#+begin_col
+,#+begin_box-Bg-A
+Box 1
+,#+end_box-Bg-A
+
+,#+begin_box-Bg-A
+Box 2
+,#+end_box-Bg-A
+,#+end_col
+#+end_src
+#+end_text-md
+#+end_dFlex-col
+#+end_col2
+* Credits
+** Landscape pictures
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch"
+:END:
+#+ATTR_HTML: :class padded-05lr content-size text-md
+#+begin_dFlex-row
+#+begin_box-Bg-CB
+Landscape 1 ([[https://www.pexels.com/es-es/foto/globos-de-aire-caliente-en-el-cielo-2325446/][Link]])
+
+Artist: [[https://www.pexels.com/es-es/@francesco-ungaro/][Francesco Ungaro]]
+#+end_box-Bg-CB
+
+#+begin_box-Bg-CB
+Landscape 2 ([[https://www.pexels.com/es-es/foto/silueta-de-montanas-durante-el-amanecer-1809644/][Link]])
+
+Artist: [[https://www.pexels.com/es-es/@cmonphotography/][cmonphotography]]
+#+end_box-Bg-CB
+
+#+begin_box-Bg-CB
+Landscape 3 ([[https://www.pexels.com/es-es/foto/monte-fuji-japon-1108701/][Link]])
+
+Artist: [[https://www.pexels.com/es-es/@liger-pham-232622/][Liger Pham]]
+#+end_box-Bg-CB
+
+#+begin_box-Bg-CB
+Landscape 4 ([[https://www.pexels.com/es-es/foto/fotografia-aerea-de-una-montana-640809/][Link]])
+
+Artist: [[https://www.pexels.com/es-es/@eberhardgross/][eberhard grossgasteiger]]
+#+end_box-Bg-CB
+
+#+begin_box-Bg-CB
+Landscape 5 ([[https://www.pexels.com/es-es/foto/campo-de-hierba-verde-y-arboles-bajo-un-cielo-azul-3996362/][Link]])
+
+Artist: [[https://www.pexels.com/es-es/@chavdar-lungov-2332494/][Chavdar Lungov]]
+#+end_box-Bg-CB
+
+#+begin_box-Bg-CB
+Landscape 6 ([[https://www.pexels.com/es-es/foto/foto-secuencial-de-la-aurora-boreal-1933316/][Link]])
+
+Artist: [[https://www.pexels.com/es-es/@therato/][stein egil liland]]
+#+end_box-Bg-CB
+
+#+begin_box-Bg-CB
+Landscape 7 ([[https://www.pexels.com/es-es/foto/lago-rodeado-de-montanas-durante-la-hora-dorada-1126382/][Link]])
+
+Artist: [[https://www.pexels.com/es-es/@jplenio/][Johannes Plenio]]
+#+end_box-Bg-CB
+#+end_dFlex-row
+

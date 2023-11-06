@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Reveal.js demo2</title>
+<meta name="author" content="Saul S.L."/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/moon.css" id="theme"/>
+
+<link rel="stylesheet" href="./plugin_extra/customcontrols/style.css"/>
+
+<link rel="stylesheet" href="./personal/css/icustom.css"/>
+
+<link rel="stylesheet" href="./plugin_extra/drawer/drawer.css"/>
+
+<link rel="stylesheet" href="./plugin_extra/pointer/pointer.css"/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/zenburn.css"/><meta name="description" content="Reveal.js demo">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Reveal.js demo2</h1><p class="subtitle"></p>
+<h2 class="author">Saul S.L.</h2><h2 class="date">2023-11-10</h2>
+</section>
+<section>
+<section id="slide-org1f594dc">
+<h2 id="org1f594dc">Layouts</h2>
+<div class="outline-text-2" id="text-org1f594dc">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org896fbe5" class="stretch  box-Bg-B">
+<h3 id="org896fbe5">Title and single content</h3>
+<div class="content-size box-Bg-A" id="org8b83585">
+<p>
+Box 1
+</p>
+
+</div>
+</section>
+<section id="slide-org0156d12" class="stretch ">
+<h4 id="org0156d12">Long list</h4>
+<ul class="content-size dFlex-col dFlex-evenly box-Bg-A padded-1lr">
+<li>Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.</li>
+<li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+<li>Donec vitae dolor.</li>
+<li>Phasellus purus.</li>
+<li>Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.</li>
+<li>Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.</li>
+
+</ul>
+</section>
+<section id="slide-org7e7133b" class="stretch ">
+<h4 id="org7e7133b">Short list</h4>
+<ul class="content-size dFlex dFlex-evenly box-Bg-A padded-1lr">
+<li>Nullam libero mauris, consequat quis, varius et, dictum id, arcu.</li>
+<li>Donec vitae dolor.</li>
+<li>Aliquam feugiat tellus ut neque.</li>
+
+</ul>
+</section>
+<section id="slide-org27652cc" class="stretch">
+<h4 id="org27652cc">Layout with code</h4>
+<div class="content-size col2" id="org6e5e6bf">
+<div class="dFlex-centered dFlex-col" id="orgb2a0a09">
+<div class="box-Bg-C" id="orga8445b1">
+
+<div id="org1902b90" class="figure">
+<p><img src="./personal/images/layout-1.png" alt="layout-1.png" />
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="dFlex-centered dFlex-col" id="org24ee6ab">
+<p>
+Emacs org-mode content
+</p>
+<div class="text-md" id="org8fecd66">
+<div class="org-src-container">
+
+<pre   ><code class="org" >** Title and single content
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_box-Bg-A
+Box 1
+#+end_box-Bg-A
+</code></pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org3eb056e" class="stretch box-Bg-B">
+<h3 id="org3eb056e">Title and 2 elements (columns)</h3>
+<div class="content-size col2" id="org4956c8e">
+<div class="box-Bg-A" id="orged79b33">
+<p>
+Box 1
+</p>
+
+</div>
+<div class="box-Bg-A" id="org85039e9">
+<p>
+Box 2
+</p>
+
+</div>
+
+</div>
+</section>
+<section id="slide-org1ef9271" class="stretch">
+<h4 id="org1ef9271">Images with lists</h4>
+<div class="content-size col2" id="org111c3b4">
+<div class="box-Bg-A" id="org014f5f0">
+
+<div id="org8060167" class="figure">
+<p><img src="./personal/images/landscape-1.jpg" alt="landscape-1.jpg" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Landscape 1</p>
+</div>
+<ul class="text-sm">
+<li>Nullam tristique diam non turpis.</li>
+<li>Curabitur lacinia pulvinar nibh.</li>
+
+</ul>
+
+</div>
+
+<div class="box-Bg-A" id="orgea784c6">
+
+<div id="org6d28810" class="figure">
+<p><img src="./personal/images/landscape-2.jpg" alt="landscape-2.jpg" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Landscape 2</p>
+</div>
+
+</div>
+
+</div>
+</section>
+<section id="slide-org8f1525c" class="stretch">
+<h4 id="org8f1525c">Content of different height</h4>
+<div class="content-size col2" id="orgd5a851d">
+<div class="box-Bg-A" id="org1421b8a">
+<ul class="text-sm padded-1">
+<li>Nullam tristique diam non turpis.</li>
+<li>Curabitur lacinia pulvinar nibh.</li>
+
+</ul>
+
+</div>
+
+<div class="dFlex-col dFlex-evenly box-Bg-A" id="org07c3921">
+<ul class="text-sm padded-1">
+<li>Mauris ac felis vel velit tristique imperdiet.</li>
+<li>Praesent fermentum tempor tellus.</li>
+<li>Cras placerat accumsan nulla.</li>
+<li>Phasellus neque orci, porta a, aliquet quis, semper a, massa.</li>
+<li>Nulla posuere.</li>
+<li>Etiam laoreet quam sed arcu.</li>
+<li>Curabitur vulputate vestibulum lorem.</li>
+<li>Nulla posuere.</li>
+<li>Aliquam posuere.</li>
+
+</ul>
+
+</div>
+
+</div>
+</section>
+<section id="slide-orgf441603" class="stretch">
+<h4 id="orgf441603">Layout with code</h4>
+<div class="content-size col2" id="org2ee77a3">
+<div class="dFlex-centered dFlex-col" id="org3286624">
+<div class="box-Bg-C" id="org79946fa">
+
+<div id="org18f4824" class="figure">
+<p><img src="./personal/images/layout-2.png" alt="layout-2.png" />
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="dFlex-centered dFlex-col" id="orge63ee90">
+<p>
+Emacs org-mode content
+</p>
+<div class="text-md" id="org92bde90">
+<div class="org-src-container">
+
+<pre   ><code class="org" >** Title and 2 elements (columns)
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+#+begin_col2
+#+begin_box-Bg-A
+Box 1
+#+end_box-Bg-A
+#+end_col2
+#+begin_box-Bg-A
+Box 2
+#+end_box-Bg-A
+</code></pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org016ccef" class="stretch  box-Bg-B">
+<h3 id="org016ccef">Title and 3 elements (Columns)</h3>
+<div class="content-size col2-span-rowLast" id="orgedba608">
+<div class="box-Bg-A" id="org223e171">
+<p>
+Box 1
+</p>
+
+</div>
+
+<div class="box-Bg-A" id="org5d410cf">
+<p>
+Box 2
+</p>
+
+</div>
+
+<div class="box-Bg-A" id="orgcf67c5d">
+<p>
+Box 3
+</p>
+
+</div>
+
+</div>
+</section>
+<section id="slide-org182e0c3" class="stretch ">
+<h4 id="org182e0c3">2 images and long description</h4>
+<div class="col2-span-rowLast" id="org0d8194f">
+<div class="box-Bg-A" id="org4d4345f">
+
+<div id="org91d5977" class="figure">
+<p><img src="./personal/images/landscape-1.jpg" alt="landscape-1.jpg" class="img-50w" />
+</p>
+<p><span class="figure-number">Figure 3: </span>Landscape 1</p>
+</div>
+
+</div>
+
+<div class="box-Bg-A" id="org81d150b">
+
+<div id="org94532e1" class="figure">
+<p><img src="./personal/images/landscape-2.jpg" alt="landscape-2.jpg" class="img-50w" />
+</p>
+<p><span class="figure-number">Figure 4: </span>Landscape 2</p>
+</div>
+
+</div>
+
+<div class="box-Bg-A" id="org20ca231">
+<p class="text-md justify padded-1lr">
+Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+</p>
+
+</div>
+
+</div>
+</section>
+<section id="slide-org89bb5d5" class="stretch">
+<h4 id="org89bb5d5">2 images and long description (Reversed)</h4>
+<div class="col2-span-rowFirst" id="org8ae32b5">
+<div class="box-Bg-A" id="org00c5b51">
+<p class="text-md justify padded-1lr">
+Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+</p>
+
+</div>
+
+<div class="box-Bg-A" id="orgf428d19">
+
+<div id="orge60501c" class="figure">
+<p><img src="./personal/images/landscape-1.jpg" alt="landscape-1.jpg" class="img-50w" />
+</p>
+<p><span class="figure-number">Figure 5: </span>Landscape 1</p>
+</div>
+
+</div>
+
+<div class="box-Bg-A" id="org96aace7">
+
+<div id="org47db600" class="figure">
+<p><img src="./personal/images/landscape-2.jpg" alt="landscape-2.jpg" class="img-50w" />
+</p>
+<p><span class="figure-number">Figure 6: </span>Landscape 2</p>
+</div>
+
+</div>
+
+</div>
+</section>
+<section id="slide-org22b5681" class="stretch ">
+<h4 id="org22b5681">1 image and two descriptions</h4>
+<div class="content-size col2-span-rowLast" id="org60de65b">
+<div class="box-Bg-A" id="org452d5f9">
+<p class="text-md justify padded-1lr">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.
+</p>
+
+</div>
+
+<div class="box-Bg-A" id="org14c1cbc">
+<ul class="text-md">
+<li>Etiam laoreet quam sed arcu.</li>
+
+</ul>
+
+</div>
+
+<div class="box-Bg-A" id="org68d5dd0">
+
+<div id="org31871ee" class="figure">
+<p><img src="./personal/images/landscape-3.jpg" alt="landscape-3.jpg" />
+</p>
+<p><span class="figure-number">Figure 7: </span>Landscape 3</p>
+</div>
+
+</div>
+
+</div>
+</section>
+<section id="slide-org0bef5ac" class="stretch">
+<h4 id="org0bef5ac">Layout with code</h4>
+<div class="content-size col2" id="orga9d4df5">
+<div class="dFlex-centered dFlex-col" id="org8b1faf6">
+<div class="box-Bg-C" id="orgd2408b6">
+
+<div id="orga6a7e3f" class="figure">
+<p><img src="./personal/images/layout-3.png" alt="layout-3.png" />
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="dFlex-centered code-60h dFlex-col" id="orgf6e4adc">
+<p>
+Emacs org-mode content
+</p>
+<div class="text-md" id="org5d68a18">
+<div class="org-src-container">
+
+<pre   ><code class="org" >** Title and 3 elements (Columns)
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2-span-rowLast
+#+begin_box-Bg-A
+Box 1
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 2
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 3
+#+end_box-Bg-A
+#+end_col2-span-rowLast
+</code></pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org7e56620" class="stretch  box-Bg-B">
+<h3 id="org7e56620">Title and 3 elements (Rows)</h3>
+<div class="content-size col2" id="org924eced">
+<div class="box-Bg-A" id="orgb9c0569">
+<p>
+Box 1
+</p>
+
+</div>
+
+<div class="box-Bg-A" id="orgb28f780">
+<p>
+Box 2
+</p>
+
+</div>
+
+<div class="col2-span-column box-Bg-A" id="orgd751f4c">
+<p>
+Box 3
+</p>
+
+</div>
+
+</div>
+</section>
+<section id="slide-orgdc54265" class="stretch ">
+<h4 id="orgdc54265">2 images and description</h4>
+<div class="content-size col2" id="org541dc59">
+<div class="box-Bg-A" id="org61daf97">
+
+<div id="org4fc4316" class="figure">
+<p><img src="./personal/images/landscape-4.jpg" alt="landscape-4.jpg" />
+</p>
+<p><span class="figure-number">Figure 8: </span>Landscape 4</p>
+</div>
+
+</div>
+
+<div class="box-Bg-A" id="org690ef65">
+
+<div id="orga15bb01" class="figure">
+<p><img src="./personal/images/landscape-5.jpg" alt="landscape-5.jpg" />
+</p>
+<p><span class="figure-number">Figure 9: </span>Landscape 5</p>
+</div>
+
+</div>
+
+<div class="col2-span-column box-Bg-A" id="org6853350">
+<ul class="dFlex dFlex-evenly box-20h text-sm">
+<li>Nunc eleifend leo vitae magna.</li>
+<li>Nullam rutrum.</li>
+<li>Curabitur lacinia pulvinar nibh.</li>
+<li>Nullam libero mauris, consequat quis, varius et, dictum id, arcu.</li>
+
+</ul>
+
+</div>
+
+</div>
+</section>
+<section id="slide-org845be27" class="stretch">
+<h4 id="org845be27">Layout with code</h4>
+<div class="content-size col2" id="org6a1bbf6">
+<div class="dFlex-centered dFlex-col" id="orgdd7a30f">
+<div class="box-Bg-C" id="org619f540">
+
+<div id="org8c4142b" class="figure">
+<p><img src="./personal/images/layout-4.png" alt="layout-4.png" />
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="dFlex-centered code-60h dFlex-col" id="orgfaa3884">
+<p>
+Emacs org-mode content
+</p>
+<div class="text-md" id="org54919a7">
+<div class="org-src-container">
+
+<pre   ><code class="org" >** Title and 3 elements (Rows)
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2
+#+begin_box-Bg-A
+Box 1
+#+end_box-Bg-A
+#+begin_box-Bg-A
+Box 2
+#+end_box-Bg-A
+
+#+ATTR_HTML: :class col2-span-column
+#+begin_box-Bg-A
+Box 3
+#+end_box-Bg-A
+#+end_col2
+</code></pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgce8f31b" class="stretch  box-Bg-B">
+<h3 id="orgce8f31b">Title and 4 elements</h3>
+<div class="content-size col2" id="orgb7d0ae2">
+<div class="box-Bg-A" id="org127e0bc">
+<p>
+Box 1
+</p>
+
+</div>
+
+<div class="box-Bg-A" id="orgd10422e">
+<p>
+Box 2
+</p>
+
+</div>
+
+<div class="box-Bg-A" id="org950064e">
+<p>
+Box 3
+</p>
+
+</div>
+
+<div class="box-Bg-A" id="org70c331b">
+<p>
+Box 4
+</p>
+
+</div>
+
+</div>
+</section>
+<section id="slide-org33d411d" class="stretch  box-Bg-B">
+<h4 id="org33d411d">Title and 4 images</h4>
+<div class="content-size col2" id="org0ad0dd9">
+<div class="box-Bg-A" id="org8aa4535">
+
+<div id="org5fb407d" class="figure">
+<p><img src="./personal/images/landscape-6.jpg" alt="landscape-6.jpg" class="img-50w" />
+</p>
+<p><span class="figure-number">Figure 10: </span>Landscape 5</p>
+</div>
+
+</div>
+
+<div class="box-Bg-A" id="org2073a12">
+
+<div id="org02a2449" class="figure">
+<p><img src="./personal/images/landscape-7.jpg" alt="landscape-7.jpg" class="img-50w" />
+</p>
+<p><span class="figure-number">Figure 11: </span>Landscape 7</p>
+</div>
+
+</div>
+
+<div class="box-Bg-A" id="orgc9fdae1">
+
+<div id="org0db61ab" class="figure">
+<p><img src="./personal/images/landscape-1.jpg" alt="landscape-1.jpg" class="img-50w" />
+</p>
+<p><span class="figure-number">Figure 12: </span>Landscape 1</p>
+</div>
+
+</div>
+
+<div class="box-Bg-A" id="org36913bb">
+
+<div id="org49918fc" class="figure">
+<p><img src="./personal/images/landscape-2.jpg" alt="landscape-2.jpg" class="img-50w" />
+</p>
+<p><span class="figure-number">Figure 13: </span>Landscape 2</p>
+</div>
+
+</div>
+
+</div>
+</section>
+<section id="slide-orgbbeef70" class="stretch  box-Bg-B">
+<h4 id="orgbbeef70">Title, 2 images and 2 descriptions</h4>
+<div class="content-size col2" id="org9a91f75">
+<div class="box-Bg-A" id="org39b88bf">
+
+<div id="org9f09cfe" class="figure">
+<p><img src="./personal/images/landscape-3.jpg" alt="landscape-3.jpg" class="img-50w" />
+</p>
+<p><span class="figure-number">Figure 14: </span>Landscape 3</p>
+</div>
+
+</div>
+
+<div class="box-Bg-A" id="org9eed7b7">
+
+<div id="org5aee640" class="figure">
+<p><img src="./personal/images/landscape-4.jpg" alt="landscape-4.jpg" class="img-50w" />
+</p>
+<p><span class="figure-number">Figure 15: </span>Landscape 4</p>
+</div>
+
+</div>
+
+<div class="box-Bg-A" id="orgdfe671a">
+<ul class="text-sm">
+<li>Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.</li>
+<li>Nunc rutrum turpis sed pede.</li>
+<li>Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.</li>
+
+</ul>
+
+</div>
+
+<div class="box-Bg-A" id="orgfe84d0e">
+<p class="text-fn justify padded-05lr">
+Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.
+</p>
+
+</div>
+
+</div>
+</section>
+<section id="slide-orge4d6d8d" class="stretch">
+<h4 id="orge4d6d8d">Layout with code</h4>
+<div class="content-size col2" id="orgdaf5345">
+<div class="dFlex-centered dFlex-col" id="org1d42838">
+<div class="box-Bg-C" id="org0841d00">
+
+<div id="orgfe3a5ce" class="figure">
+<p><img src="./personal/images/layout-5.png" alt="layout-5.png" />
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="dFlex-centered code-70h dFlex-col" id="org571de46">
+<p>
+Emacs org-mode content
+</p>
+<div class="text-md" id="orgcb6f7be">
+<div class="org-src-container">
+
+<pre   ><code class="org" >** Title and 4 elements
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col2
+#+begin_box-Bg-A
+Box 1
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 2
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 3
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 4
+#+end_box-Bg-A
+#+end_col2
+</code></pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org274569d" class="stretch  box-Bg-B">
+<h3 id="org274569d">Title and 6 elements</h3>
+<div class="content-size col3" id="org6270ed1">
+<div class="box-Bg-A" id="orgc18b134">
+<p>
+Box 1
+</p>
+
+</div>
+
+<div class="box-Bg-A" id="org874639e">
+<p>
+Box 2
+</p>
+
+</div>
+
+<div class="box-Bg-A" id="orgc85c26b">
+<p>
+Box 3
+</p>
+
+</div>
+
+<div class="box-Bg-A" id="org44fe49a">
+<p>
+Box 4
+</p>
+
+</div>
+
+<div class="box-Bg-A" id="org0d585d5">
+<p>
+Box 5
+</p>
+
+</div>
+
+<div class="box-Bg-A" id="org69c4160">
+<p>
+Box 6
+</p>
+
+</div>
+
+</div>
+</section>
+<section id="slide-org03e0d3c" class="stretch  box-Bg-B">
+<h4 id="org03e0d3c">Title and 6 images</h4>
+<div class="content-size col3" id="org4841c7a">
+<div class="box-Bg-A" id="orge647092">
+
+<div id="org5adbce9" class="figure">
+<p><img src="./personal/images/landscape-5.jpg" alt="landscape-5.jpg" />
+</p>
+</div>
+
+</div>
+
+<div class="box-Bg-A" id="org5231cda">
+
+<div id="org329f09f" class="figure">
+<p><img src="./personal/images/landscape-6.jpg" alt="landscape-6.jpg" />
+</p>
+</div>
+
+</div>
+
+<div class="box-Bg-A" id="orgce51fdc">
+
+<div id="orgcd7b81c" class="figure">
+<p><img src="./personal/images/landscape-7.jpg" alt="landscape-7.jpg" />
+</p>
+</div>
+
+</div>
+
+<div class="box-Bg-A" id="orge744a8f">
+
+<div id="org5eced8e" class="figure">
+<p><img src="./personal/images/landscape-1.jpg" alt="landscape-1.jpg" />
+</p>
+</div>
+
+</div>
+
+<div class="box-Bg-A" id="orge70b227">
+
+<div id="org7f6563b" class="figure">
+<p><img src="./personal/images/landscape-2.jpg" alt="landscape-2.jpg" />
+</p>
+</div>
+
+</div>
+
+<div class="box-Bg-A" id="orge2758ae">
+
+<div id="org48b0925" class="figure">
+<p><img src="./personal/images/landscape-3.jpg" alt="landscape-3.jpg" />
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+<section id="slide-orgd13fc01" class="stretch">
+<h4 id="orgd13fc01">Layout with code</h4>
+<div class="content-size col2" id="orgc8888e0">
+<div class="dFlex-centered dFlex-col" id="org633b5f5">
+<div class="box-Bg-C" id="org5121026">
+
+<div id="org319646e" class="figure">
+<p><img src="./personal/images/layout-6.png" alt="layout-6.png" />
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="dFlex-centered code-70h dFlex-col" id="org1ebcf41">
+<p>
+Emacs org-mode content
+</p>
+<div class="text-md" id="org8a45fe9">
+<div class="org-src-container">
+
+<pre   ><code class="org" >** Title and 6 elements
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col3
+#+begin_box-Bg-A
+Box 1
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 2
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 3
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 4
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 5
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 6
+#+end_box-Bg-A
+#+end_col3
+</code></pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orge669670" class="stretch  box-Bg-B">
+<h3 id="orge669670">Title and 2 elements (rows)</h3>
+<div class="content-size col" id="org2241c89">
+<div class="box-Bg-A" id="org0397a84">
+<p>
+Box 1
+</p>
+
+</div>
+
+<div class="box-Bg-A" id="org790d211">
+<p>
+Box 2
+</p>
+
+</div>
+
+</div>
+</section>
+<section id="slide-orgcb0e367" class="stretch ">
+<h4 id="orgcb0e367">Large image and description</h4>
+<div class="content-box col" id="org120c426">
+<div class="box-Bg-A" id="org25538db">
+
+<div id="orgd4fbbc5" class="figure">
+<p><img src="./personal/images/landscape-4.jpg" alt="landscape-4.jpg" />
+</p>
+<p><span class="figure-number">Figure 16: </span>Landscape 4</p>
+</div>
+
+</div>
+
+<div class="box-Bg-A" id="org4d44e39">
+<ul class="text-sm">
+<li>Nullam tristique diam non turpis.</li>
+<li>Curabitur lacinia pulvinar nibh.</li>
+
+</ul>
+
+</div>
+
+</div>
+</section>
+<section id="slide-org417f8db" class="stretch ">
+<h4 id="org417f8db">Mid image and description</h4>
+<div class="content-box col" id="orgf8cc05b">
+<div class="box-Bg-A" id="org8951bd2">
+
+<div id="org68f5a90" class="figure">
+<p><img src="./personal/images/landscape-5.jpg" alt="landscape-5.jpg" class="img-40w" />
+</p>
+<p><span class="figure-number">Figure 17: </span>Landscape 5</p>
+</div>
+
+</div>
+
+<div class="box-Bg-A" id="orgb893223">
+<ul class="text-md">
+<li>Nullam tristique diam non turpis.</li>
+<li>Curabitur lacinia pulvinar nibh.</li>
+<li>Nullam tristique diam non turpis.</li>
+<li>Curabitur lacinia pulvinar nibh.</li>
+
+</ul>
+
+</div>
+
+</div>
+</section>
+<section id="slide-orgfe36500" class="stretch">
+<h4 id="orgfe36500">Layout with code</h4>
+<div class="content-size col2" id="orgb8e979c">
+<div class="dFlex-centered dFlex-col" id="org3bcec44">
+<div class="box-Bg-C" id="org437db45">
+
+<div id="orge894caa" class="figure">
+<p><img src="./personal/images/layout-7.png" alt="layout-7.png" />
+</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="dFlex-centered dFlex-col" id="org6aea615">
+<p>
+Emacs org-mode content
+</p>
+<div class="text-md" id="org42f8d3c">
+<div class="org-src-container">
+
+<pre   ><code class="org" >** Title and 2 elements (rows)
+:PROPERTIES:
+:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
+:END:
+#+ATTR_HTML: :class content-size
+#+begin_col
+#+begin_box-Bg-A
+Box 1
+#+end_box-Bg-A
+
+#+begin_box-Bg-A
+Box 2
+#+end_box-Bg-A
+#+end_col
+</code></pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgae1b4ce">
+<h2 id="orgae1b4ce">Credits</h2>
+<div class="outline-text-2" id="text-orgae1b4ce">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org00c17f7" class="stretch">
+<h3 id="org00c17f7">Landscape pictures</h3>
+<div class="padded-05lr content-size text-md dFlex-row" id="org75a0ea4">
+<div class="box-Bg-CB" id="orgc845abc">
+<p>
+Landscape 1 (<a href="https://www.pexels.com/es-es/foto/globos-de-aire-caliente-en-el-cielo-2325446/">Link</a>)
+</p>
+
+<p>
+Artist: <a href="https://www.pexels.com/es-es/@francesco-ungaro/">Francesco Ungaro</a>
+</p>
+
+</div>
+
+<div class="box-Bg-CB" id="org8c61a03">
+<p>
+Landscape 2 (<a href="https://www.pexels.com/es-es/foto/silueta-de-montanas-durante-el-amanecer-1809644/">Link</a>)
+</p>
+
+<p>
+Artist: <a href="https://www.pexels.com/es-es/@cmonphotography/">cmonphotography</a>
+</p>
+
+</div>
+
+<div class="box-Bg-CB" id="orgb25e22c">
+<p>
+Landscape 3 (<a href="https://www.pexels.com/es-es/foto/monte-fuji-japon-1108701/">Link</a>)
+</p>
+
+<p>
+Artist: <a href="https://www.pexels.com/es-es/@liger-pham-232622/">Liger Pham</a>
+</p>
+
+</div>
+
+<div class="box-Bg-CB" id="org49f1028">
+<p>
+Landscape 4 (<a href="https://www.pexels.com/es-es/foto/fotografia-aerea-de-una-montana-640809/">Link</a>)
+</p>
+
+<p>
+Artist: <a href="https://www.pexels.com/es-es/@eberhardgross/">eberhard grossgasteiger</a>
+</p>
+
+</div>
+
+<div class="box-Bg-CB" id="org20ca317">
+<p>
+Landscape 5 (<a href="https://www.pexels.com/es-es/foto/campo-de-hierba-verde-y-arboles-bajo-un-cielo-azul-3996362/">Link</a>)
+</p>
+
+<p>
+Artist: <a href="https://www.pexels.com/es-es/@chavdar-lungov-2332494/">Chavdar Lungov</a>
+</p>
+
+</div>
+
+<div class="box-Bg-CB" id="orgfb34d7f">
+<p>
+Landscape 6 (<a href="https://www.pexels.com/es-es/foto/foto-secuencial-de-la-aurora-boreal-1933316/">Link</a>)
+</p>
+
+<p>
+Artist: <a href="https://www.pexels.com/es-es/@therato/">stein egil liland</a>
+</p>
+
+</div>
+
+<div class="box-Bg-CB" id="org20b78fc">
+<p>
+Landscape 7 (<a href="https://www.pexels.com/es-es/foto/lago-rodeado-de-montanas-durante-la-hora-dorada-1126382/">Link</a>)
+</p>
+
+<p>
+Artist: <a href="https://www.pexels.com/es-es/@jplenio/">Johannes Plenio</a>
+</p>
+
+</div>
+
+</div>
+</section>
+</section>
+</div>
+</div>
+<p>Created by ssl</p>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom/zoom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
+<script src="./plugin_extra/menu/menu.js"></script>
+<script src="./plugin_extra/customcontrols/plugin.js"></script>
+<script src="./plugin_extra/pointer/pointer.js"></script>
+<script src="./plugin_extra/drawer/drawer.js"></script>
+
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+plugins: [RevealNotes, RevealZoom, RevealHighlight, RevealMenu, RevealCustomControls, RevealPointer, RevealDrawer],
+width:1200, height:800, minScale:0.2, maxScale:2.5, transition: 'fade', progress:true, history:true, center:true, mouseWheel:false, menu:{themes:true, transitions:true, markers:true, custom: false, hideMissingTitles:true}, customcontrols:{controls:[{id:'toggle-overview', title:'Toggleoverview(O)', icon:'<i class="fa fa-th"></i>', action:'Reveal.toggleOverview();'}, {icon:'<i class="fa fa-message"></i>', title:'Toggle iframe legend', action:'ilegend()'}]}, pointer: {key: "q", color: "red", pointerSize: 16, alwaysVisible: false, tailLength: 10}
+});
+
+</script>
+<script src="./personal/js/icustom.js"></script>
+</body>
+</html>
