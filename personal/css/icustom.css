@@ -66,14 +66,25 @@
     flex-direction: column;
 }
 
+.reveal .dFlex-col-default {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 .reveal .dFlex-row {
     display: flex;
     gap: 2em;
     flex-wrap: wrap;
 }
 
-.dFlex-centered { justify-content: center; }
-.dFlex-evenly { justify-content: space-evenly; }
+.dFlex-start    { justify-content: flex-start;    }
+.dFlex-end      { justify-content: flex-end;      }
+.dFlex-centered { justify-content: center;        }
+.dFlex-around   { justify-content: space-around;  }
+.dFlex-evenly   { justify-content: space-evenly;  }
+.dFlex-between  { justify-content: space-between; }
+
 
 /* Grid  */
 .reveal .col {
@@ -124,6 +135,10 @@ ol {
     width: calc(100% - 2em);
 }
 
+.list-sm li { margin: 0.250em 0; }
+.list-md li { margin: 0.500em 0; }
+.list-lg li { margin: 0.750em 0; }
+
 /* ============================== */
 /* Font options */
 /* ============================== */
@@ -131,6 +146,7 @@ ol {
 .text-fn  { font-size: 0.625rem; }
 .text-sm  { font-size: 0.750rem; }
 .text-md  { font-size: 0.875rem; }
+.text-lg  { font-size: 1.125rem; }
 .title-md h4,
 h5 { font-size: 1.5em;    }
 .title-sm h4,
@@ -141,6 +157,14 @@ h5 { font-size: 1.375em;    }
     text-align: justify;
     text-justify: inter-word;
 }
+
+/* Space */
+.mt-6 { margin-top: 6rem;}
+.mt-5 { margin-top: 5rem;}
+.mt-4 { margin-top: 4rem;}
+.mt-3 { margin-top: 3rem;}
+
+
 
 /* Text color */
 .textCol-link { color: var(--r-link-color)}
@@ -174,7 +198,14 @@ h5 { font-size: 1.375em;    }
 .code-50h pre{ height: calc(var(--slide-height)*0.5);}
 
 /* Image max width */
+.reveal .img-fixed100      { width: 100%; }
+
+/* Image max width */
 .reveal .img      { max-width: 100%; }
+.reveal .img-90w  { max-width: 90%;  }
+.reveal .img-80w  { max-width: 80%;  }
+.reveal .img-70w  { max-width: 70%;  }
+.reveal .img-60w  { max-width: 60%;  }
 .reveal .img-50w  { max-width: 50%;  }
 .reveal .img-45w  { max-width: 45%;  }
 .reveal .img-40w  { max-width: 40%;  }
@@ -225,4 +256,28 @@ h5 { font-size: 1.375em;    }
     border-radius: 0.750em;
     align-content: center;
     align-items: center;
+}
+
+/* ============================== */
+/* Iframes */
+/* ============================== */
+.iframe {
+    background: var(--clr-bg-message);
+    border-radius: 1em;
+}
+
+.iframe blockquote{
+    background: var(--clr-bg-message);
+    color: var(--r-main-color);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    /* word-spacing: 0.15em; */
+    /* letter-spacing: 1px; */
+    /* font-style: normal; */
+    text-align: left;
+}
+
+.iframe .out{
+    opacity: 0;
+    transition: opacity 0.7s;
 }
