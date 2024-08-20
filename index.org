@@ -7,29 +7,36 @@
 #+MACRO: class #+ATTR_HTML: :class $1
 #+MACRO: html #+REVEAL_HTML: $1
 
-#+options: timestamp:nil ^:{}
 #+Title: Reveal.js demo2
 #+Author: Saul S.L.
 #+Date: 2023-11-10
 
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js@5.1.0
+#+REVEAL_INIT_OPTIONS: width:1200, height:800, minScale:0.2, maxScale:2.5, transition: 'fade', progress:true, history:true, center:true, mouseWheel:false, menu:{themes:true, themesPath:'https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/', transitions:true, markers:true, custom: false, hideMissingTitles:true}, customcontrols:{controls:[{id:'toggle-overview', title:'Toggleoverview(O)', icon:'<i class="fa fa-th"></i>', action:'Reveal.toggleOverview();'}, {icon:'<i class="fa fa-message"></i>', title:'Toggle iframe legend', action:'ilegend()'}]}, pointer: {key: "q", color: "red", pointerSize: 16, alwaysVisible: false, tailLength: 10}, plugins: [ RevealMenu, RevealCustomControls, RevealPointer, RevealDrawer ]
+
+#+OPTIONS: timestamp:nil ^:{} num:nil toc:nil
 #+REVEAL_HLEVEL: 2
 #+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Reveal.js demo">
 #+REVEAL_POSTAMBLE: <p>Created by ssl</p>
-#+REVEAL_INIT_OPTIONS: width:1200, height:800, minScale:0.2, maxScale:2.5, transition: 'fade', progress:true, history:true, center:true, mouseWheel:false, menu:{themes:true, themesPath:'https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/', transitions:true, markers:true, custom: false, hideMissingTitles:true}, customcontrols:{controls:[{id:'toggle-overview', title:'Toggleoverview(O)', icon:'<i class="fa fa-th"></i>', action:'Reveal.toggleOverview();'}, {icon:'<i class="fa fa-message"></i>', title:'Toggle iframe legend', action:'ilegend()'}]}, pointer: {key: "q", color: "red", pointerSize: 16, alwaysVisible: false, tailLength: 10}
 #+REVEAL_THEME: moon
-#+OPTIONS: num:nil toc:nil
 
 #+REVEAL_EXTRA_CSS: ./plugin_extra/customcontrols/style.css
 #+REVEAL_EXTRA_CSS: ./personal/css/icustom.css
 #+REVEAL_EXTRA_CSS: ./plugin_extra/drawer/drawer.css
 #+REVEAL_EXTRA_CSS: ./plugin_extra/pointer/pointer.css
-#+REVEAL_EXTRA_CSS: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css
-#+REVEAL_EXTERNAL_PLUGINS: (RevealMenu . "./plugin_extra/menu/menu.js") 
-#+REVEAL_EXTERNAL_PLUGINS: (RevealCustomControls . "./plugin_extra/customcontrols/plugin.js")
-#+REVEAL_EXTERNAL_PLUGINS: (RevealDrawer . "./plugin_extra/drawer/drawer.js")
-#+REVEAL_EXTERNAL_PLUGINS: (RevealPointer . "./plugin_extra/pointer/pointer.js")
-#+REVEAL_PLUGINS: (notes zoom highlight RevealMenu RevealCustomControls RevealPointer RevealDrawer)
+#+REVEAL_EXTRA_CSS: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css
+
+# #+REVEAL_EXTERNAL_PLUGINS: (RevealMenu . "./plugin_extra/menu/menu.js") 
+# #+REVEAL_EXTERNAL_PLUGINS: (RevealCustomControls . "./plugin_extra/customcontrols/plugin.js")
+# #+REVEAL_EXTERNAL_PLUGINS: (RevealDrawer . "./plugin_extra/drawer/drawer.js")
+# #+REVEAL_EXTERNAL_PLUGINS: (RevealPointer . "./plugin_extra/pointer/pointer.js")
+# #+REVEAL_PLUGINS: (notes zoom highlight RevealMenu RevealCustomControls RevealPointer RevealDrawer)
+
+#+REVEAL_EXTRA_SCRIPT_BEFORE_SRC: ./plugin_extra/menu/menu.js 
+#+REVEAL_EXTRA_SCRIPT_BEFORE_SRC: ./plugin_extra/customcontrols/plugin.js
+#+REVEAL_EXTRA_SCRIPT_BEFORE_SRC: ./plugin_extra/drawer/drawer.js
+#+REVEAL_EXTRA_SCRIPT_BEFORE_SRC: ./plugin_extra/pointer/pointer.js
+
 #+REVEAL_EXTRA_SCRIPT_SRC: ./personal/js/icustom.js
 
 * Layouts

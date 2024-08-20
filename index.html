@@ -21,8 +21,19 @@
 
 <link rel="stylesheet" href="./plugin_extra/pointer/pointer.css"/>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/zenburn.css"/><meta name="description" content="Reveal.js demo">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<meta name="description" content="Reveal.js demo">
 </head>
 <body>
 <div class="reveal">
@@ -31,24 +42,24 @@
 <h2 class="author">Saul S.L.</h2><h2 class="date">2023-11-10</h2>
 </section>
 <section>
-<section id="slide-orgef5c03c">
-<h2 id="orgef5c03c">Layouts</h2>
-<div class="outline-text-2" id="text-orgef5c03c">
+<section id="slide-org6091b77">
+<h2 id="org6091b77">Layouts</h2>
+<div class="outline-text-2" id="text-org6091b77">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgf085af5" class="stretch  box-Bg-B">
-<h3 id="orgf085af5">Title and single content</h3>
-<div class="content-size box-Bg-A" id="org79f1acd">
+<section id="slide-orgfa15917" class="stretch  box-Bg-B">
+<h3 id="orgfa15917">Title and single content</h3>
+<div class="content-size box-Bg-A" id="org0d21a0b">
 <p>
 Box 1
 </p>
 
 </div>
 </section>
-<section id="slide-org4581a03" class="stretch ">
-<h4 id="org4581a03">Long list</h4>
+<section id="slide-org2e15ba2" class="stretch ">
+<h4 id="org2e15ba2">Long list</h4>
 <ul class="content-size dFlex-col dFlex-evenly box-Bg-A padded-1lr">
 <li>Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.</li>
 <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
@@ -59,8 +70,8 @@ Box 1
 
 </ul>
 </section>
-<section id="slide-org6091f0a" class="stretch ">
-<h4 id="org6091f0a">Short list</h4>
+<section id="slide-orgaee08f0" class="stretch ">
+<h4 id="orgaee08f0">Short list</h4>
 <ul class="content-size dFlex dFlex-evenly box-Bg-A padded-1lr">
 <li>Nullam libero mauris, consequat quis, varius et, dictum id, arcu.</li>
 <li>Donec vitae dolor.</li>
@@ -68,13 +79,13 @@ Box 1
 
 </ul>
 </section>
-<section id="slide-org4c7521d" class="stretch">
-<h4 id="org4c7521d">Layout with code</h4>
-<div class="content-size col2" id="org766552b">
-<div class="dFlex-centered dFlex-col" id="orgbba877e">
-<div class="box-Bg-C" id="org9402f25">
+<section id="slide-org3f0daba" class="stretch">
+<h4 id="org3f0daba">Layout with code</h4>
+<div class="content-size col2" id="orgf173717">
+<div class="dFlex-centered dFlex-col" id="orgdbef0ba">
+<div class="box-Bg-C" id="orgd2dffec">
 
-<div id="org4c7e8c1" class="figure">
+<div id="orgda01a21" class="figure">
 <p><img src="./personal/images/layout-1.png" alt="layout-1.png" />
 </p>
 </div>
@@ -83,21 +94,21 @@ Box 1
 
 </div>
 
-<div class="dFlex-centered dFlex-col" id="orgfefccd3">
+<div class="dFlex-centered dFlex-col" id="orgca22c18">
 <p>
 Emacs org-mode content
 </p>
-<div class="text-md" id="org792248e">
+<div class="text-md" id="org105be42">
 <div class="org-src-container">
 
-<pre   ><code class="org" >** Title and single content
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
-:END:
-#+ATTR_HTML: :class content-size
-#+begin_box-Bg-A
+<pre  class="src src-org"   ><code trim><span style="color: #fff9f9;">*</span><span style="font-size: 140%;">* Title and single content</span>
+<span style="color: #756275;">:PROPERTIES:</span>
+<span style="color: #92454f; font-style: italic;">:REVEAL_EXTRA_ATTR:</span> <span style="color: #194f90;">class="stretch  box-Bg-B"</span>
+<span style="color: #756275;">:END:</span>
+<span style="color: #756275; font-style: italic;">#+ATTR_HTML: :class content-size</span>
+<span style="color: #756275; background-color: #efecec;">#+begin_box-Bg-A</span>
 Box 1
-#+end_box-Bg-A
+<span style="color: #756275; background-color: #efecec;">#+end_box-Bg-A</span>
 </code></pre>
 </div>
 
@@ -109,16 +120,16 @@ Box 1
 </section>
 </section>
 <section>
-<section id="slide-orgc7d9a72" class="stretch box-Bg-B">
-<h3 id="orgc7d9a72">Title and 2 elements (columns)</h3>
-<div class="content-size col2" id="org2761433">
-<div class="box-Bg-A" id="org8b63705">
+<section id="slide-org9aa2756" class="stretch box-Bg-B">
+<h3 id="org9aa2756">Title and 2 elements (columns)</h3>
+<div class="content-size col2" id="org003db29">
+<div class="box-Bg-A" id="orgb85af54">
 <p>
 Box 1
 </p>
 
 </div>
-<div class="box-Bg-A" id="orgcaa54fc">
+<div class="box-Bg-A" id="orgdcf151b">
 <p>
 Box 2
 </p>
@@ -127,12 +138,12 @@ Box 2
 
 </div>
 </section>
-<section id="slide-org28f4e32" class="stretch">
-<h4 id="org28f4e32">Images with lists</h4>
-<div class="content-size col2" id="orgd448113">
-<div class="box-Bg-A" id="org88aed7f">
+<section id="slide-org6fdffa7" class="stretch">
+<h4 id="org6fdffa7">Images with lists</h4>
+<div class="content-size col2" id="orgc147c39">
+<div class="box-Bg-A" id="orgbcaa42f">
 
-<div id="org4b53b77" class="figure">
+<div id="orgb1106fc" class="figure">
 <p><img src="./personal/images/landscape-1.jpg" alt="landscape-1.jpg" />
 </p>
 <p><span class="figure-number">Figure 1: </span>Landscape 1</p>
@@ -145,9 +156,9 @@ Box 2
 
 </div>
 
-<div class="box-Bg-A" id="org71ba915">
+<div class="box-Bg-A" id="org2e855ae">
 
-<div id="orgaae4694" class="figure">
+<div id="orgb86174b" class="figure">
 <p><img src="./personal/images/landscape-2.jpg" alt="landscape-2.jpg" />
 </p>
 <p><span class="figure-number">Figure 2: </span>Landscape 2</p>
@@ -157,10 +168,10 @@ Box 2
 
 </div>
 </section>
-<section id="slide-orge2820cf" class="stretch">
-<h4 id="orge2820cf">Content of different height</h4>
-<div class="content-size col2" id="org7e1a050">
-<div class="box-Bg-A" id="org9eb6640">
+<section id="slide-orgc6ce81c" class="stretch">
+<h4 id="orgc6ce81c">Content of different height</h4>
+<div class="content-size col2" id="org2525004">
+<div class="box-Bg-A" id="org3b0afa4">
 <ul class="text-sm padded-1">
 <li>Nullam tristique diam non turpis.</li>
 <li>Curabitur lacinia pulvinar nibh.</li>
@@ -169,7 +180,7 @@ Box 2
 
 </div>
 
-<div class="dFlex-col dFlex-evenly box-Bg-A" id="org5c96a5c">
+<div class="dFlex-col dFlex-evenly box-Bg-A" id="org5796fd9">
 <ul class="text-sm padded-1">
 <li>Mauris ac felis vel velit tristique imperdiet.</li>
 <li>Praesent fermentum tempor tellus.</li>
@@ -187,13 +198,13 @@ Box 2
 
 </div>
 </section>
-<section id="slide-orgc70c140" class="stretch">
-<h4 id="orgc70c140">Layout with code</h4>
-<div class="content-size col2" id="org0ca8297">
-<div class="dFlex-centered dFlex-col" id="org1e87450">
-<div class="box-Bg-C" id="orgaa75b99">
+<section id="slide-org4da9735" class="stretch">
+<h4 id="org4da9735">Layout with code</h4>
+<div class="content-size col2" id="org44fc623">
+<div class="dFlex-centered dFlex-col" id="orgf430c2f">
+<div class="box-Bg-C" id="orgf2694ad">
 
-<div id="orge415158" class="figure">
+<div id="org7d5eae5" class="figure">
 <p><img src="./personal/images/layout-2.png" alt="layout-2.png" />
 </p>
 </div>
@@ -202,25 +213,25 @@ Box 2
 
 </div>
 
-<div class="dFlex-centered dFlex-col" id="org048f642">
+<div class="dFlex-centered dFlex-col" id="orgfa9a9ad">
 <p>
 Emacs org-mode content
 </p>
-<div class="text-md" id="orgaee7bcf">
+<div class="text-md" id="org286e44e">
 <div class="org-src-container">
 
-<pre   ><code class="org" >** Title and 2 elements (columns)
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
-:END:
-#+begin_col2
-#+begin_box-Bg-A
+<pre  class="src src-org"   ><code trim><span style="color: #fff9f9;">*</span><span style="font-size: 140%;">* Title and 2 elements (columns)</span>
+<span style="color: #756275;">:PROPERTIES:</span>
+<span style="color: #92454f; font-style: italic;">:REVEAL_EXTRA_ATTR:</span> <span style="color: #194f90;">class="stretch  box-Bg-B"</span>
+<span style="color: #756275;">:END:</span>
+#+begin<span style="color: #2f5faf;">_col2</span>
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 1
-#+end_box-Bg-A
-#+end_col2
-#+begin_box-Bg-A
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
+#+end<span style="color: #2f5faf;">_col2</span>
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 2
-#+end_box-Bg-A
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
 </code></pre>
 </div>
 
@@ -232,24 +243,24 @@ Box 2
 </section>
 </section>
 <section>
-<section id="slide-orged02689" class="stretch  box-Bg-B">
-<h3 id="orged02689">Title and 3 elements (Columns)</h3>
-<div class="content-size col2-span-rowLast" id="org725d664">
-<div class="box-Bg-A" id="orgefdfb6a">
+<section id="slide-org8ce60a2" class="stretch  box-Bg-B">
+<h3 id="org8ce60a2">Title and 3 elements (Columns)</h3>
+<div class="content-size col2-span-rowLast" id="orgffd4534">
+<div class="box-Bg-A" id="org63d5950">
 <p>
 Box 1
 </p>
 
 </div>
 
-<div class="box-Bg-A" id="orgac4cd70">
+<div class="box-Bg-A" id="orgdd4d23e">
 <p>
 Box 2
 </p>
 
 </div>
 
-<div class="box-Bg-A" id="org6fe903c">
+<div class="box-Bg-A" id="orgfa2ed2e">
 <p>
 Box 3
 </p>
@@ -258,12 +269,12 @@ Box 3
 
 </div>
 </section>
-<section id="slide-org4b5af7a" class="stretch ">
-<h4 id="org4b5af7a">2 images and long description</h4>
-<div class="col2-span-rowLast" id="org3e2638c">
-<div class="box-Bg-A" id="org527b912">
+<section id="slide-orgd6afc6e" class="stretch ">
+<h4 id="orgd6afc6e">2 images and long description</h4>
+<div class="col2-span-rowLast" id="org76fa289">
+<div class="box-Bg-A" id="org340b9ea">
 
-<div id="orgb5fb786" class="figure">
+<div id="orge5e8b9f" class="figure">
 <p><img src="./personal/images/landscape-1.jpg" alt="landscape-1.jpg" class="img-50w" />
 </p>
 <p><span class="figure-number">Figure 3: </span>Landscape 1</p>
@@ -271,9 +282,9 @@ Box 3
 
 </div>
 
-<div class="box-Bg-A" id="orgbd3590d">
+<div class="box-Bg-A" id="org985f479">
 
-<div id="orgb28cb69" class="figure">
+<div id="org8d03270" class="figure">
 <p><img src="./personal/images/landscape-2.jpg" alt="landscape-2.jpg" class="img-50w" />
 </p>
 <p><span class="figure-number">Figure 4: </span>Landscape 2</p>
@@ -281,7 +292,7 @@ Box 3
 
 </div>
 
-<div class="box-Bg-A" id="orgdd00682">
+<div class="box-Bg-A" id="orgb3eae47">
 <p class="text-md justify padded-1lr">
 Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
 </p>
@@ -290,19 +301,19 @@ Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci comm
 
 </div>
 </section>
-<section id="slide-org13423da" class="stretch">
-<h4 id="org13423da">2 images and long description (Reversed)</h4>
-<div class="col2-span-rowFirst" id="org038ff7b">
-<div class="box-Bg-A" id="org04b6774">
+<section id="slide-orgeab4d20" class="stretch">
+<h4 id="orgeab4d20">2 images and long description (Reversed)</h4>
+<div class="col2-span-rowFirst" id="org96bd68e">
+<div class="box-Bg-A" id="orgd511f8d">
 <p class="text-md justify padded-1lr">
 Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
 </p>
 
 </div>
 
-<div class="box-Bg-A" id="org9dae36a">
+<div class="box-Bg-A" id="orga3d3993">
 
-<div id="org860805b" class="figure">
+<div id="org9b6cd1f" class="figure">
 <p><img src="./personal/images/landscape-1.jpg" alt="landscape-1.jpg" class="img-50w" />
 </p>
 <p><span class="figure-number">Figure 5: </span>Landscape 1</p>
@@ -310,9 +321,9 @@ Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci comm
 
 </div>
 
-<div class="box-Bg-A" id="orga994ac1">
+<div class="box-Bg-A" id="orga12bd43">
 
-<div id="orgb6a1ad0" class="figure">
+<div id="orge614367" class="figure">
 <p><img src="./personal/images/landscape-2.jpg" alt="landscape-2.jpg" class="img-50w" />
 </p>
 <p><span class="figure-number">Figure 6: </span>Landscape 2</p>
@@ -322,17 +333,17 @@ Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci comm
 
 </div>
 </section>
-<section id="slide-org736f44d" class="stretch ">
-<h4 id="org736f44d">1 image and two descriptions</h4>
-<div class="content-size col2-span-rowLast" id="org80ce5d8">
-<div class="box-Bg-A" id="orge639e72">
+<section id="slide-org2c23cd9" class="stretch ">
+<h4 id="org2c23cd9">1 image and two descriptions</h4>
+<div class="content-size col2-span-rowLast" id="orgb576b21">
+<div class="box-Bg-A" id="orga10f4c1">
 <p class="text-md justify padded-1lr">
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.
 </p>
 
 </div>
 
-<div class="box-Bg-A" id="org45a5131">
+<div class="box-Bg-A" id="org257fcfa">
 <ul class="text-md">
 <li>Etiam laoreet quam sed arcu.</li>
 
@@ -340,9 +351,9 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempo
 
 </div>
 
-<div class="box-Bg-A" id="orgfdacf48">
+<div class="box-Bg-A" id="org2db53ba">
 
-<div id="orgf2c6875" class="figure">
+<div id="org0272f04" class="figure">
 <p><img src="./personal/images/landscape-3.jpg" alt="landscape-3.jpg" />
 </p>
 <p><span class="figure-number">Figure 7: </span>Landscape 3</p>
@@ -352,13 +363,13 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempo
 
 </div>
 </section>
-<section id="slide-org1016256" class="stretch">
-<h4 id="org1016256">Layout with code</h4>
-<div class="content-size col2" id="orgc1e6a74">
-<div class="dFlex-centered dFlex-col" id="org1c3aa01">
-<div class="box-Bg-C" id="orge75042b">
+<section id="slide-org6cd8635" class="stretch">
+<h4 id="org6cd8635">Layout with code</h4>
+<div class="content-size col2" id="orgc31177d">
+<div class="dFlex-centered dFlex-col" id="org02a7d8b">
+<div class="box-Bg-C" id="org1ef76ff">
 
-<div id="orgcda6aab" class="figure">
+<div id="org49bb3ab" class="figure">
 <p><img src="./personal/images/layout-3.png" alt="layout-3.png" />
 </p>
 </div>
@@ -367,31 +378,31 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempo
 
 </div>
 
-<div class="dFlex-centered code-60h dFlex-col" id="org301cf55">
+<div class="dFlex-centered code-60h dFlex-col" id="org5e0eef0">
 <p>
 Emacs org-mode content
 </p>
-<div class="text-md" id="org41991f0">
+<div class="text-md" id="orge7c2e95">
 <div class="org-src-container">
 
-<pre   ><code class="org" >** Title and 3 elements (Columns)
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
-:END:
-#+ATTR_HTML: :class content-size
-#+begin_col2-span-rowLast
-#+begin_box-Bg-A
+<pre  class="src src-org"   ><code trim><span style="color: #fff9f9;">*</span><span style="font-size: 140%;">* Title and 3 elements (Columns)</span>
+<span style="color: #756275;">:PROPERTIES:</span>
+<span style="color: #92454f; font-style: italic;">:REVEAL_EXTRA_ATTR:</span> <span style="color: #194f90;">class="stretch  box-Bg-B"</span>
+<span style="color: #756275;">:END:</span>
+<span style="color: #756275; font-style: italic;">#+ATTR_HTML: :class content-size</span>
+#+begin<span style="color: #2f5faf;">_col2</span>-span-rowLast
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 1
-#+end_box-Bg-A
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
 
-#+begin_box-Bg-A
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 2
-#+end_box-Bg-A
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
 
-#+begin_box-Bg-A
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 3
-#+end_box-Bg-A
-#+end_col2-span-rowLast
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
+#+end<span style="color: #2f5faf;">_col2</span>-span-rowLast
 </code></pre>
 </div>
 
@@ -403,24 +414,24 @@ Box 3
 </section>
 </section>
 <section>
-<section id="slide-orge49f7d3" class="stretch  box-Bg-B">
-<h3 id="orge49f7d3">Title and 3 elements (Rows)</h3>
-<div class="content-size col2" id="org3a370e0">
-<div class="box-Bg-A" id="org18b0b82">
+<section id="slide-org0c12efe" class="stretch  box-Bg-B">
+<h3 id="org0c12efe">Title and 3 elements (Rows)</h3>
+<div class="content-size col2" id="orga643cb8">
+<div class="box-Bg-A" id="orgefa5810">
 <p>
 Box 1
 </p>
 
 </div>
 
-<div class="box-Bg-A" id="orga1db808">
+<div class="box-Bg-A" id="org0af2f69">
 <p>
 Box 2
 </p>
 
 </div>
 
-<div class="col2-span-column box-Bg-A" id="org46c0870">
+<div class="col2-span-column box-Bg-A" id="orgf9520d2">
 <p>
 Box 3
 </p>
@@ -429,12 +440,12 @@ Box 3
 
 </div>
 </section>
-<section id="slide-org985cfbf" class="stretch ">
-<h4 id="org985cfbf">2 images and description</h4>
-<div class="content-size col2" id="orgd969feb">
-<div class="box-Bg-A" id="orgbc4f2d2">
+<section id="slide-org33b6e90" class="stretch ">
+<h4 id="org33b6e90">2 images and description</h4>
+<div class="content-size col2" id="org694d17d">
+<div class="box-Bg-A" id="org30338d7">
 
-<div id="org15aa514" class="figure">
+<div id="orgc82708e" class="figure">
 <p><img src="./personal/images/landscape-4.jpg" alt="landscape-4.jpg" />
 </p>
 <p><span class="figure-number">Figure 8: </span>Landscape 4</p>
@@ -442,9 +453,9 @@ Box 3
 
 </div>
 
-<div class="box-Bg-A" id="org7af6f1d">
+<div class="box-Bg-A" id="org99feeb9">
 
-<div id="org765e48b" class="figure">
+<div id="org752db77" class="figure">
 <p><img src="./personal/images/landscape-5.jpg" alt="landscape-5.jpg" />
 </p>
 <p><span class="figure-number">Figure 9: </span>Landscape 5</p>
@@ -452,7 +463,7 @@ Box 3
 
 </div>
 
-<div class="col2-span-column box-Bg-A" id="orgc1b15a1">
+<div class="col2-span-column box-Bg-A" id="orgc3c90b7">
 <ul class="dFlex dFlex-evenly box-20h text-sm">
 <li>Nunc eleifend leo vitae magna.</li>
 <li>Nullam rutrum.</li>
@@ -465,13 +476,13 @@ Box 3
 
 </div>
 </section>
-<section id="slide-orgfee4fe8" class="stretch">
-<h4 id="orgfee4fe8">Layout with code</h4>
-<div class="content-size col2" id="orgf5dbfe2">
-<div class="dFlex-centered dFlex-col" id="org8e0464e">
-<div class="box-Bg-C" id="orgc705f60">
+<section id="slide-org1b5868f" class="stretch">
+<h4 id="org1b5868f">Layout with code</h4>
+<div class="content-size col2" id="orgcb15861">
+<div class="dFlex-centered dFlex-col" id="org130389f">
+<div class="box-Bg-C" id="org12a3663">
 
-<div id="orgc9e4134" class="figure">
+<div id="org1fe404b" class="figure">
 <p><img src="./personal/images/layout-4.png" alt="layout-4.png" />
 </p>
 </div>
@@ -480,31 +491,31 @@ Box 3
 
 </div>
 
-<div class="dFlex-centered code-60h dFlex-col" id="orge5fd175">
+<div class="dFlex-centered code-60h dFlex-col" id="org44d6e57">
 <p>
 Emacs org-mode content
 </p>
-<div class="text-md" id="org23a759e">
+<div class="text-md" id="orgdcb9c0a">
 <div class="org-src-container">
 
-<pre   ><code class="org" >** Title and 3 elements (Rows)
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
-:END:
-#+ATTR_HTML: :class content-size
-#+begin_col2
-#+begin_box-Bg-A
+<pre  class="src src-org"   ><code trim><span style="color: #fff9f9;">*</span><span style="font-size: 140%;">* Title and 3 elements (Rows)</span>
+<span style="color: #756275;">:PROPERTIES:</span>
+<span style="color: #92454f; font-style: italic;">:REVEAL_EXTRA_ATTR:</span> <span style="color: #194f90;">class="stretch  box-Bg-B"</span>
+<span style="color: #756275;">:END:</span>
+<span style="color: #756275; font-style: italic;">#+ATTR_HTML: :class content-size</span>
+#+begin<span style="color: #2f5faf;">_col2</span>
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 1
-#+end_box-Bg-A
-#+begin_box-Bg-A
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 2
-#+end_box-Bg-A
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
 
-#+ATTR_HTML: :class col2-span-column
-#+begin_box-Bg-A
+#+ATTR<span style="color: #2f5faf;">_HTML</span>: :class col2-span-column
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 3
-#+end_box-Bg-A
-#+end_col2
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
+#+end<span style="color: #2f5faf;">_col2</span>
 </code></pre>
 </div>
 
@@ -516,31 +527,31 @@ Box 3
 </section>
 </section>
 <section>
-<section id="slide-org0000bc7" class="stretch  box-Bg-B">
-<h3 id="org0000bc7">Title and 4 elements</h3>
-<div class="content-size col2" id="org6b40859">
-<div class="box-Bg-A" id="org2914477">
+<section id="slide-org1aa22fc" class="stretch  box-Bg-B">
+<h3 id="org1aa22fc">Title and 4 elements</h3>
+<div class="content-size col2" id="org19af6c3">
+<div class="box-Bg-A" id="orgb380fe9">
 <p>
 Box 1
 </p>
 
 </div>
 
-<div class="box-Bg-A" id="org4dda963">
+<div class="box-Bg-A" id="orgdac847d">
 <p>
 Box 2
 </p>
 
 </div>
 
-<div class="box-Bg-A" id="org8c10b80">
+<div class="box-Bg-A" id="orgf9c7167">
 <p>
 Box 3
 </p>
 
 </div>
 
-<div class="box-Bg-A" id="org243b584">
+<div class="box-Bg-A" id="org344aa8d">
 <p>
 Box 4
 </p>
@@ -549,12 +560,12 @@ Box 4
 
 </div>
 </section>
-<section id="slide-orgcde1abf" class="stretch  box-Bg-B">
-<h4 id="orgcde1abf">Title and 4 images</h4>
-<div class="content-size col2" id="org7dbbd88">
-<div class="box-Bg-A" id="org61c1f40">
+<section id="slide-org197c66d" class="stretch  box-Bg-B">
+<h4 id="org197c66d">Title and 4 images</h4>
+<div class="content-size col2" id="org863feb2">
+<div class="box-Bg-A" id="orgb4ab73e">
 
-<div id="org4d5c4a4" class="figure">
+<div id="orge77e481" class="figure">
 <p><img src="./personal/images/landscape-6.jpg" alt="landscape-6.jpg" class="img-50w" />
 </p>
 <p><span class="figure-number">Figure 10: </span>Landscape 5</p>
@@ -562,9 +573,9 @@ Box 4
 
 </div>
 
-<div class="box-Bg-A" id="orgec4a610">
+<div class="box-Bg-A" id="orgba99b33">
 
-<div id="org3f8f5c3" class="figure">
+<div id="orgdefc8ff" class="figure">
 <p><img src="./personal/images/landscape-7.jpg" alt="landscape-7.jpg" class="img-50w" />
 </p>
 <p><span class="figure-number">Figure 11: </span>Landscape 7</p>
@@ -572,9 +583,9 @@ Box 4
 
 </div>
 
-<div class="box-Bg-A" id="orgab9834c">
+<div class="box-Bg-A" id="orga351ea7">
 
-<div id="org9022274" class="figure">
+<div id="org7e48232" class="figure">
 <p><img src="./personal/images/landscape-1.jpg" alt="landscape-1.jpg" class="img-50w" />
 </p>
 <p><span class="figure-number">Figure 12: </span>Landscape 1</p>
@@ -582,9 +593,9 @@ Box 4
 
 </div>
 
-<div class="box-Bg-A" id="org43edcb5">
+<div class="box-Bg-A" id="org4485a9b">
 
-<div id="org2550d73" class="figure">
+<div id="org477aef1" class="figure">
 <p><img src="./personal/images/landscape-2.jpg" alt="landscape-2.jpg" class="img-50w" />
 </p>
 <p><span class="figure-number">Figure 13: </span>Landscape 2</p>
@@ -594,12 +605,12 @@ Box 4
 
 </div>
 </section>
-<section id="slide-org0dd7d2c" class="stretch  box-Bg-B">
-<h4 id="org0dd7d2c">Title, 2 images and 2 descriptions</h4>
-<div class="content-size col2" id="org520ca01">
-<div class="box-Bg-A" id="org99ce114">
+<section id="slide-org1d2c22a" class="stretch  box-Bg-B">
+<h4 id="org1d2c22a">Title, 2 images and 2 descriptions</h4>
+<div class="content-size col2" id="org53c85be">
+<div class="box-Bg-A" id="org49038c4">
 
-<div id="org03c0105" class="figure">
+<div id="org8e6ae6a" class="figure">
 <p><img src="./personal/images/landscape-3.jpg" alt="landscape-3.jpg" class="img-50w" />
 </p>
 <p><span class="figure-number">Figure 14: </span>Landscape 3</p>
@@ -607,9 +618,9 @@ Box 4
 
 </div>
 
-<div class="box-Bg-A" id="orga455156">
+<div class="box-Bg-A" id="org2852e1e">
 
-<div id="orgf105020" class="figure">
+<div id="orge17f704" class="figure">
 <p><img src="./personal/images/landscape-4.jpg" alt="landscape-4.jpg" class="img-50w" />
 </p>
 <p><span class="figure-number">Figure 15: </span>Landscape 4</p>
@@ -617,7 +628,7 @@ Box 4
 
 </div>
 
-<div class="box-Bg-A" id="org7af9910">
+<div class="box-Bg-A" id="orgce6eb4a">
 <ul class="text-sm">
 <li>Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros.</li>
 <li>Nunc rutrum turpis sed pede.</li>
@@ -627,7 +638,7 @@ Box 4
 
 </div>
 
-<div class="box-Bg-A" id="org288648a">
+<div class="box-Bg-A" id="org5a2eabb">
 <p class="text-fn justify padded-05lr">
 Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis odio.  Nunc porta vulputate tellus.  Nunc rutrum turpis sed pede.  Sed bibendum.  Aliquam posuere.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.
 </p>
@@ -636,13 +647,13 @@ Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis 
 
 </div>
 </section>
-<section id="slide-org0ca65a1" class="stretch">
-<h4 id="org0ca65a1">Layout with code</h4>
-<div class="content-size col2" id="org9a457c2">
-<div class="dFlex-centered dFlex-col" id="org25e4d06">
-<div class="box-Bg-C" id="orgb605424">
+<section id="slide-org3ac492e" class="stretch">
+<h4 id="org3ac492e">Layout with code</h4>
+<div class="content-size col2" id="org9d429fd">
+<div class="dFlex-centered dFlex-col" id="org23bd60d">
+<div class="box-Bg-C" id="org2688893">
 
-<div id="org116d2ea" class="figure">
+<div id="orgc06535b" class="figure">
 <p><img src="./personal/images/layout-5.png" alt="layout-5.png" />
 </p>
 </div>
@@ -651,35 +662,35 @@ Nullam eu ante vel est convallis dignissim.  Fusce suscipit, wisi nec facilisis 
 
 </div>
 
-<div class="dFlex-centered code-70h dFlex-col" id="orgc7b8707">
+<div class="dFlex-centered code-70h dFlex-col" id="orgd879a54">
 <p>
 Emacs org-mode content
 </p>
-<div class="text-md" id="orgd5d6f92">
+<div class="text-md" id="orgb63410a">
 <div class="org-src-container">
 
-<pre   ><code class="org" >** Title and 4 elements
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
-:END:
-#+ATTR_HTML: :class content-size
-#+begin_col2
-#+begin_box-Bg-A
+<pre  class="src src-org"   ><code trim><span style="color: #fff9f9;">*</span><span style="font-size: 140%;">* Title and 4 elements</span>
+<span style="color: #756275;">:PROPERTIES:</span>
+<span style="color: #92454f; font-style: italic;">:REVEAL_EXTRA_ATTR:</span> <span style="color: #194f90;">class="stretch  box-Bg-B"</span>
+<span style="color: #756275;">:END:</span>
+<span style="color: #756275; font-style: italic;">#+ATTR_HTML: :class content-size</span>
+#+begin<span style="color: #2f5faf;">_col2</span>
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 1
-#+end_box-Bg-A
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
 
-#+begin_box-Bg-A
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 2
-#+end_box-Bg-A
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
 
-#+begin_box-Bg-A
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 3
-#+end_box-Bg-A
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
 
-#+begin_box-Bg-A
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 4
-#+end_box-Bg-A
-#+end_col2
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
+#+end<span style="color: #2f5faf;">_col2</span>
 </code></pre>
 </div>
 
@@ -691,45 +702,45 @@ Box 4
 </section>
 </section>
 <section>
-<section id="slide-org500cf09" class="stretch  box-Bg-B">
-<h3 id="org500cf09">Title and 6 elements</h3>
-<div class="content-size col3" id="org96cef9b">
-<div class="box-Bg-A" id="org0d726bd">
+<section id="slide-org0682e46" class="stretch  box-Bg-B">
+<h3 id="org0682e46">Title and 6 elements</h3>
+<div class="content-size col3" id="org8b341b9">
+<div class="box-Bg-A" id="org9119cd3">
 <p>
 Box 1
 </p>
 
 </div>
 
-<div class="box-Bg-A" id="orgc49858a">
+<div class="box-Bg-A" id="org5933d68">
 <p>
 Box 2
 </p>
 
 </div>
 
-<div class="box-Bg-A" id="orgfcece25">
+<div class="box-Bg-A" id="orgcee5fdb">
 <p>
 Box 3
 </p>
 
 </div>
 
-<div class="box-Bg-A" id="org07136a1">
+<div class="box-Bg-A" id="org4bffeca">
 <p>
 Box 4
 </p>
 
 </div>
 
-<div class="box-Bg-A" id="org6121c64">
+<div class="box-Bg-A" id="orgc7e2f33">
 <p>
 Box 5
 </p>
 
 </div>
 
-<div class="box-Bg-A" id="org7f708a1">
+<div class="box-Bg-A" id="orgd169e53">
 <p>
 Box 6
 </p>
@@ -738,57 +749,57 @@ Box 6
 
 </div>
 </section>
-<section id="slide-org4dbc081" class="stretch  box-Bg-B">
-<h4 id="org4dbc081">Title and 6 images</h4>
-<div class="content-size col3" id="org81fb947">
-<div class="box-Bg-A" id="orgb4f3bb8">
+<section id="slide-org3e3e814" class="stretch  box-Bg-B">
+<h4 id="org3e3e814">Title and 6 images</h4>
+<div class="content-size col3" id="orgce6a269">
+<div class="box-Bg-A" id="org25784de">
 
-<div id="org1175424" class="figure">
+<div id="org6d315b7" class="figure">
 <p><img src="./personal/images/landscape-5.jpg" alt="landscape-5.jpg" />
 </p>
 </div>
 
 </div>
 
-<div class="box-Bg-A" id="org0e32b21">
+<div class="box-Bg-A" id="org89869ef">
 
-<div id="org4b219f3" class="figure">
+<div id="org19c0a13" class="figure">
 <p><img src="./personal/images/landscape-6.jpg" alt="landscape-6.jpg" />
 </p>
 </div>
 
 </div>
 
-<div class="box-Bg-A" id="orgb439486">
+<div class="box-Bg-A" id="orgafaca19">
 
-<div id="org160c3d0" class="figure">
+<div id="org56e1357" class="figure">
 <p><img src="./personal/images/landscape-7.jpg" alt="landscape-7.jpg" />
 </p>
 </div>
 
 </div>
 
-<div class="box-Bg-A" id="org42fc46b">
+<div class="box-Bg-A" id="org9325e11">
 
-<div id="org3b146a3" class="figure">
+<div id="orgbdeed2c" class="figure">
 <p><img src="./personal/images/landscape-1.jpg" alt="landscape-1.jpg" />
 </p>
 </div>
 
 </div>
 
-<div class="box-Bg-A" id="orge2db60f">
+<div class="box-Bg-A" id="org93a8a12">
 
-<div id="orga96cb48" class="figure">
+<div id="org2fa0f39" class="figure">
 <p><img src="./personal/images/landscape-2.jpg" alt="landscape-2.jpg" />
 </p>
 </div>
 
 </div>
 
-<div class="box-Bg-A" id="orgc400d20">
+<div class="box-Bg-A" id="org37f7c21">
 
-<div id="orgc4450c4" class="figure">
+<div id="orgb6883d3" class="figure">
 <p><img src="./personal/images/landscape-3.jpg" alt="landscape-3.jpg" />
 </p>
 </div>
@@ -797,13 +808,13 @@ Box 6
 
 </div>
 </section>
-<section id="slide-orgb565ed1" class="stretch">
-<h4 id="orgb565ed1">Layout with code</h4>
-<div class="content-size col2" id="orgdec760c">
-<div class="dFlex-centered dFlex-col" id="org714c8f5">
-<div class="box-Bg-C" id="org70e252a">
+<section id="slide-org93419f5" class="stretch">
+<h4 id="org93419f5">Layout with code</h4>
+<div class="content-size col2" id="org1c48772">
+<div class="dFlex-centered dFlex-col" id="orgcb0e906">
+<div class="box-Bg-C" id="org1b56eeb">
 
-<div id="org5cdbf26" class="figure">
+<div id="orgdd4bba9" class="figure">
 <p><img src="./personal/images/layout-6.png" alt="layout-6.png" />
 </p>
 </div>
@@ -812,43 +823,43 @@ Box 6
 
 </div>
 
-<div class="dFlex-centered code-70h dFlex-col" id="orgbeb9fa6">
+<div class="dFlex-centered code-70h dFlex-col" id="org086a64b">
 <p>
 Emacs org-mode content
 </p>
-<div class="text-md" id="orga5e1136">
+<div class="text-md" id="org81d64ea">
 <div class="org-src-container">
 
-<pre   ><code class="org" >** Title and 6 elements
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
-:END:
-#+ATTR_HTML: :class content-size
-#+begin_col3
-#+begin_box-Bg-A
+<pre  class="src src-org"   ><code trim><span style="color: #fff9f9;">*</span><span style="font-size: 140%;">* Title and 6 elements</span>
+<span style="color: #756275;">:PROPERTIES:</span>
+<span style="color: #92454f; font-style: italic;">:REVEAL_EXTRA_ATTR:</span> <span style="color: #194f90;">class="stretch  box-Bg-B"</span>
+<span style="color: #756275;">:END:</span>
+<span style="color: #756275; font-style: italic;">#+ATTR_HTML: :class content-size</span>
+#+begin<span style="color: #2f5faf;">_col3</span>
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 1
-#+end_box-Bg-A
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
 
-#+begin_box-Bg-A
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 2
-#+end_box-Bg-A
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
 
-#+begin_box-Bg-A
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 3
-#+end_box-Bg-A
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
 
-#+begin_box-Bg-A
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 4
-#+end_box-Bg-A
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
 
-#+begin_box-Bg-A
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 5
-#+end_box-Bg-A
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
 
-#+begin_box-Bg-A
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 6
-#+end_box-Bg-A
-#+end_col3
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
+#+end<span style="color: #2f5faf;">_col3</span>
 </code></pre>
 </div>
 
@@ -860,17 +871,17 @@ Box 6
 </section>
 </section>
 <section>
-<section id="slide-org23fab4c" class="stretch  box-Bg-B">
-<h3 id="org23fab4c">Title and 2 elements (rows)</h3>
-<div class="content-size col" id="org68d38a2">
-<div class="box-Bg-A" id="org68f9ff2">
+<section id="slide-org721f434" class="stretch  box-Bg-B">
+<h3 id="org721f434">Title and 2 elements (rows)</h3>
+<div class="content-size col" id="orgac7732d">
+<div class="box-Bg-A" id="org9b1b983">
 <p>
 Box 1
 </p>
 
 </div>
 
-<div class="box-Bg-A" id="orgebbdccf">
+<div class="box-Bg-A" id="org95330e5">
 <p>
 Box 2
 </p>
@@ -879,12 +890,12 @@ Box 2
 
 </div>
 </section>
-<section id="slide-orgacc28a4" class="stretch ">
-<h4 id="orgacc28a4">Large image and description</h4>
-<div class="content-box col" id="orgab79668">
-<div class="box-Bg-A" id="orgd545287">
+<section id="slide-org8f86510" class="stretch ">
+<h4 id="org8f86510">Large image and description</h4>
+<div class="content-box col" id="org66c9d37">
+<div class="box-Bg-A" id="org323e155">
 
-<div id="orgd6f9c84" class="figure">
+<div id="orgbb3e4ae" class="figure">
 <p><img src="./personal/images/landscape-4.jpg" alt="landscape-4.jpg" />
 </p>
 <p><span class="figure-number">Figure 16: </span>Landscape 4</p>
@@ -892,7 +903,7 @@ Box 2
 
 </div>
 
-<div class="box-Bg-A" id="org272177d">
+<div class="box-Bg-A" id="org31d9354">
 <ul class="text-sm">
 <li>Nullam tristique diam non turpis.</li>
 <li>Curabitur lacinia pulvinar nibh.</li>
@@ -903,12 +914,12 @@ Box 2
 
 </div>
 </section>
-<section id="slide-org8a9e325" class="stretch ">
-<h4 id="org8a9e325">Mid image and description</h4>
-<div class="content-box col" id="orgb3f96e9">
-<div class="box-Bg-A" id="orgd03edf8">
+<section id="slide-orged6f284" class="stretch ">
+<h4 id="orged6f284">Mid image and description</h4>
+<div class="content-box col" id="orgb3e4515">
+<div class="box-Bg-A" id="orgbc12548">
 
-<div id="org5d6572f" class="figure">
+<div id="org40f57cd" class="figure">
 <p><img src="./personal/images/landscape-5.jpg" alt="landscape-5.jpg" class="img-40w" />
 </p>
 <p><span class="figure-number">Figure 17: </span>Landscape 5</p>
@@ -916,7 +927,7 @@ Box 2
 
 </div>
 
-<div class="box-Bg-A" id="orgd33195f">
+<div class="box-Bg-A" id="org8f38701">
 <ul class="text-md">
 <li>Nullam tristique diam non turpis.</li>
 <li>Curabitur lacinia pulvinar nibh.</li>
@@ -929,13 +940,13 @@ Box 2
 
 </div>
 </section>
-<section id="slide-orgd19a7eb" class="stretch">
-<h4 id="orgd19a7eb">Layout with code</h4>
-<div class="content-size col2" id="orgc691679">
-<div class="dFlex-centered dFlex-col" id="orgdafed27">
-<div class="box-Bg-C" id="orgc14ed29">
+<section id="slide-orgad260a3" class="stretch">
+<h4 id="orgad260a3">Layout with code</h4>
+<div class="content-size col2" id="org360c7bd">
+<div class="dFlex-centered dFlex-col" id="org5b03f0e">
+<div class="box-Bg-C" id="org73d15fc">
 
-<div id="org049d8d4" class="figure">
+<div id="org08d198a" class="figure">
 <p><img src="./personal/images/layout-7.png" alt="layout-7.png" />
 </p>
 </div>
@@ -944,27 +955,27 @@ Box 2
 
 </div>
 
-<div class="dFlex-centered dFlex-col" id="orgbb3b917">
+<div class="dFlex-centered dFlex-col" id="orgaa4acb1">
 <p>
 Emacs org-mode content
 </p>
-<div class="text-md" id="orgbef82ae">
+<div class="text-md" id="orgaed4ae6">
 <div class="org-src-container">
 
-<pre   ><code class="org" >** Title and 2 elements (rows)
-:PROPERTIES:
-:REVEAL_EXTRA_ATTR: class="stretch  box-Bg-B"
-:END:
-#+ATTR_HTML: :class content-size
-#+begin_col
-#+begin_box-Bg-A
+<pre  class="src src-org"   ><code trim><span style="color: #fff9f9;">*</span><span style="font-size: 140%;">* Title and 2 elements (rows)</span>
+<span style="color: #756275;">:PROPERTIES:</span>
+<span style="color: #92454f; font-style: italic;">:REVEAL_EXTRA_ATTR:</span> <span style="color: #194f90;">class="stretch  box-Bg-B"</span>
+<span style="color: #756275;">:END:</span>
+<span style="color: #756275; font-style: italic;">#+ATTR_HTML: :class content-size</span>
+<span style="color: #756275; background-color: #efecec;">#+begin_col</span>
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 1
-#+end_box-Bg-A
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
 
-#+begin_box-Bg-A
+#+begin<span style="color: #2f5faf;">_box</span>-Bg-A
 Box 2
-#+end_box-Bg-A
-#+end_col
+#+end<span style="color: #2f5faf;">_box</span>-Bg-A
+<span style="color: #756275; background-color: #efecec;">#+end_col</span>
 </code></pre>
 </div>
 
@@ -976,17 +987,17 @@ Box 2
 </section>
 </section>
 <section>
-<section id="slide-org44078cd">
-<h2 id="org44078cd">Credits</h2>
-<div class="outline-text-2" id="text-org44078cd">
+<section id="slide-org898bb7a">
+<h2 id="org898bb7a">Credits</h2>
+<div class="outline-text-2" id="text-org898bb7a">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgfa71230" class="stretch">
-<h3 id="orgfa71230">Landscape pictures</h3>
-<div class="padded-05lr content-size text-md dFlex-row" id="orgc055fcd">
-<div class="box-Bg-CB" id="orgd3d47c6">
+<section id="slide-org7dfbee0" class="stretch">
+<h3 id="org7dfbee0">Landscape pictures</h3>
+<div class="padded-05lr content-size text-md dFlex-row" id="orgb7b53b5">
+<div class="box-Bg-CB" id="org5fc36c4">
 <p>
 Landscape 1 (<a href="https://www.pexels.com/es-es/foto/globos-de-aire-caliente-en-el-cielo-2325446/">Link</a>)
 </p>
@@ -997,7 +1008,7 @@ Artist: <a href="https://www.pexels.com/es-es/@francesco-ungaro/">Francesco Unga
 
 </div>
 
-<div class="box-Bg-CB" id="orge5837ae">
+<div class="box-Bg-CB" id="orge1c62fa">
 <p>
 Landscape 2 (<a href="https://www.pexels.com/es-es/foto/silueta-de-montanas-durante-el-amanecer-1809644/">Link</a>)
 </p>
@@ -1008,7 +1019,7 @@ Artist: <a href="https://www.pexels.com/es-es/@cmonphotography/">cmonphotography
 
 </div>
 
-<div class="box-Bg-CB" id="orgbfcdcc9">
+<div class="box-Bg-CB" id="org2cb348b">
 <p>
 Landscape 3 (<a href="https://www.pexels.com/es-es/foto/monte-fuji-japon-1108701/">Link</a>)
 </p>
@@ -1019,7 +1030,7 @@ Artist: <a href="https://www.pexels.com/es-es/@liger-pham-232622/">Liger Pham</a
 
 </div>
 
-<div class="box-Bg-CB" id="org184b668">
+<div class="box-Bg-CB" id="orgf4b4382">
 <p>
 Landscape 4 (<a href="https://www.pexels.com/es-es/foto/fotografia-aerea-de-una-montana-640809/">Link</a>)
 </p>
@@ -1030,7 +1041,7 @@ Artist: <a href="https://www.pexels.com/es-es/@eberhardgross/">eberhard grossgas
 
 </div>
 
-<div class="box-Bg-CB" id="org60aca6c">
+<div class="box-Bg-CB" id="org81da2d0">
 <p>
 Landscape 5 (<a href="https://www.pexels.com/es-es/foto/campo-de-hierba-verde-y-arboles-bajo-un-cielo-azul-3996362/">Link</a>)
 </p>
@@ -1041,7 +1052,7 @@ Artist: <a href="https://www.pexels.com/es-es/@chavdar-lungov-2332494/">Chavdar 
 
 </div>
 
-<div class="box-Bg-CB" id="orga583ca0">
+<div class="box-Bg-CB" id="orgaaa0ea2">
 <p>
 Landscape 6 (<a href="https://www.pexels.com/es-es/foto/foto-secuencial-de-la-aurora-boreal-1933316/">Link</a>)
 </p>
@@ -1052,7 +1063,7 @@ Artist: <a href="https://www.pexels.com/es-es/@therato/">stein egil liland</a>
 
 </div>
 
-<div class="box-Bg-CB" id="orgae57917">
+<div class="box-Bg-CB" id="orgb401c2d">
 <p>
 Landscape 7 (<a href="https://www.pexels.com/es-es/foto/lago-rodeado-de-montanas-durante-la-hora-dorada-1126382/">Link</a>)
 </p>
@@ -1070,21 +1081,24 @@ Artist: <a href="https://www.pexels.com/es-es/@jplenio/">Johannes Plenio</a>
 </div>
 <p>Created by ssl</p>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/zoom/zoom.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
 <script src="./plugin_extra/menu/menu.js"></script>
 <script src="./plugin_extra/customcontrols/plugin.js"></script>
-<script src="./plugin_extra/pointer/pointer.js"></script>
 <script src="./plugin_extra/drawer/drawer.js"></script>
-
+<script src="./plugin_extra/pointer/pointer.js"></script>
 
 <script>
 // Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
-plugins: [RevealNotes, RevealZoom, RevealHighlight, RevealMenu, RevealCustomControls, RevealPointer, RevealDrawer],
-width:1200, height:800, minScale:0.2, maxScale:2.5, transition: 'fade', progress:true, history:true, center:true, mouseWheel:false, menu:{themes:true, themesPath:'https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/', transitions:true, markers:true, custom: false, hideMissingTitles:true}, customcontrols:{controls:[{id:'toggle-overview', title:'Toggleoverview(O)', icon:'<i class="fa fa-th"></i>', action:'Reveal.toggleOverview();'}, {icon:'<i class="fa fa-message"></i>', title:'Toggle iframe legend', action:'ilegend()'}]}, pointer: {key: "q", color: "red", pointerSize: 16, alwaysVisible: false, tailLength: 10}
+width:1200, height:800, minScale:0.2, maxScale:2.5, transition: 'fade', progress:true, history:true, center:true, mouseWheel:false, menu:{themes:true, themesPath:'https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/', transitions:true, markers:true, custom: false, hideMissingTitles:true}, customcontrols:{controls:[{id:'toggle-overview', title:'Toggleoverview(O)', icon:'<i class="fa fa-th"></i>', action:'Reveal.toggleOverview();'}, {icon:'<i class="fa fa-message"></i>', title:'Toggle iframe legend', action:'ilegend()'}]}, pointer: {key: "q", color: "red", pointerSize: 16, alwaysVisible: false, tailLength: 10}, plugins: [ RevealMenu, RevealCustomControls, RevealPointer, RevealDrawer ],
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
 });
 
 </script>
